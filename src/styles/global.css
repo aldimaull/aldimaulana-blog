@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+ width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+ @apply bg-neutral-98 dark:bg-neutral-10;
+}
+
+*::-webkit-scrollbar-thumb {
+ @apply bg-secondary-40 rounded-full;
+}
+
+.material-symbols-rounded {
+ font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.material-symbols-rounded:hover {
+ font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+article h1 {
+ @apply text-5xl dark:text-secondary-80 text-secondary-40;
+}
+
+article h2 {
+ @apply text-4xl dark:text-secondary-80 text-secondary-40;
+}
+article h3 {
+ @apply text-3xl dark:text-secondary-80 text-secondary-40;
+}
+article h4 {
+ @apply text-2xl dark:text-secondary-80 text-secondary-40;
+}
+article h5 {
+ @apply text-xl dark:text-secondary-80 text-secondary-40;
+}
+article h6 {
+ @apply text-lg dark:text-secondary-80 text-secondary-40;
+}
+
+article a {
+ @apply underline decoration-2 font-semibold text-tertiary-40 dark:text-tertiary-80 hover:text-tertiary-40/70 dark:hover:text-tertiary-80/70 duration-300;
+}
+
+article em {
+ @apply font-bold dark:bg-tertiary-80 dark:text-tertiary-20 text-tertiary-100 bg-tertiary-40 px-1 rounded-sm;
+}
+
+article p {
+ @apply my-4 text-lg leading-8 dark:text-neutral-90 text-neutral-10 text-justify;
+}
+
+article ul {
+ @apply list-disc text-lg pl-12 my-4 space-y-2;
+ list-style-type: "📌  ";
+}
+
+article ul div {
+ @apply ms-2;
+}
+
+article ul li {
+ @apply dark:text-neutral-90 text-neutral-10;
+}
+
+article ol {
+ @apply list-decimal text-lg pl-12 my-4 space-y-2;
+}
+
+article ol div {
+ @apply ms-2;
+}
+
+article ol li {
+ counter-increment: li;
+ display: list-item;
+ @apply dark:text-neutral-90 text-neutral-10;
+}
+
+article ol li::marker {
+ display: none;
+ content: "#" counter(li) " ";
+ @apply dark:text-tertiary-80 text-tertiary-20;
+ font-weight: bold;
+}
+
+article .alert p {
+ @apply dark:bg-error-80 dark:text-error-20 bg-error-40 text-error-90 leading-6 font-extrabold border-none rounded-xl p-4;
+}
+
+article code {
+ @apply bg-neutral-variant-90 dark:bg-neutral-variant-20 text-neutral-variant-10 dark:text-neutral-variant-80 px-1 rounded-md;
+}
+
+article pre {
+ @apply p-4 rounded-3xl bg-neutral-variant-30 overflow-auto !important;
+}
+
+article pre::-webkit-scrollbar {
+ @apply overflow-hidden overflow-x-scroll;
+}
+
+article pre code {
+ @apply bg-transparent !important;
+}
+
+article table {
+ @apply block table-auto overflow-hidden overflow-x-scroll;
+}
+
+article table p {
+ @apply text-base my-2;
+}
+
+article th {
+ @apply font-bold dark:bg-neutral-variant-20 bg-neutral-variant-90 dark:text-neutral-variant-95 text-neutral-variant-30 p-2 pl-4;
+}
+
+article tr {
+ @apply border-b border-neutral-variant-50 dark:border-neutral-variant-60;
+}
+
+article td {
+ @apply dark:bg-neutral-10 bg-neutral-98 dark:text-neutral-90 text-neutral-10 px-4 py-2;
+}
+
+article .table-wrapper {
+ @apply rounded-xl border overflow-hidden border-neutral-variant-50 dark:border-neutral-variant-60;
+}
+
+article blockquote {
+ @apply text-justify border-l-4 dark:border-tertiary-80 dark:text-tertiary-80 text-tertiary-40 border-tertiary-40 italic my-4 pl-8;
+ font-family: Georgia, Times, "Times New Roman", serif;
+ font-size: 1.25em;
+ font-style: italic;
+ line-height: 1.8em;
+ padding: 1em 2em;
+ position: relative;
+ transition: 0.2s border ease-in-out;
+ z-index: 0;
+}
+
+article blockquote::before {
+ @apply dark:bg-neutral-variant-10 bg-neutral-variant-98;
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: -4px;
+ height: 2em;
+ width: 5px;
+ margin-top: -1em;
+}
+
+article blockquote::after {
+ @apply dark:text-tertiary-40 text-tertiary-80;
+ content: "”";
+ position: absolute;
+ top: 50%;
+ left: -0.5em;
+ font-size: 4em;
+ font-style: normal;
+ line-height: 1em;
+ text-align: center;
+ text-indent: -2px;
+ width: 1em;
+ margin-top: -0.2em;
+}
+
+

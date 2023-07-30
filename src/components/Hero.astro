@@ -1,0 +1,100 @@
+---
+import fotoSaya from "../images/fotoSaya.png";
+import {
+ TbBrandInstagram,
+ TbBrandFacebook,
+ TbBrandTelegram,
+ TbBrandLinkedin,
+} from "react-icons/tb";
+---
+
+<div
+ class="flex mx-auto h-screen w-full flex-col items-center justify-center bg-cover dark:text-neutral-98 text-neutral-10 font-sans dark:bg-neutral-10 bg-neutral-98"
+>
+ <div
+  class="flex text-center items-center text-md font-bold uppercase dark:text-primary-80 text-primary-40 tracking-[.5em]"
+ >
+  <span>Selamat Datang</span>
+  <span>
+   {/* <Lottie animationData={rocketAnimation} style={style} /> */}
+  </span>
+ </div>
+ <img
+  class="mt-6 h-40 w-40 rounded-full border-4 border-outlinelight dark:border-outlinedark"
+  src={fotoSaya}
+  alt="Foto Aldi Maulana"
+ />
+ <h1 class="mt-6 text-3xl dark:text-neutral-98 text-neutral-10 md:text-4xl">
+  {
+   /* <Typed
+                        strings={['Halo', 'Salam', 'Shalom']}
+                        typeSpeed={120}
+                        backSpeed={140}
+                        loop
+                    /> */
+  }
+  Halo👋, Saya{" "}
+  <span
+   class="animate-gradient bg-gradient-to-bl from-primary-80 via-secondary-80 to-tertiary-80 bg-[length:400%_400%] bg-clip-text font-bold text-transparent"
+  >
+   Aldi Maulana
+  </span>
+ </h1>
+ <p class="mt-2 text-center font-semibold">
+  Saya seorang mahasiswa Pendidikan Ilmu Komputer <br /> dari kampus Universitas
+  Pendidikan Indonesia
+ </p>
+ <div class="hero-nav flex my-4 w-96 justify-evenly">
+  <a href="/blog">Blog</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+ </div>
+ <div>
+  <p class="text-center">
+   Silakan kunjungi dan ikuti akun media sosial saya di bawah ini
+  </p>
+  <div class="mt-2 flex justify-center gap-4">
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandInstagram
+     className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+    />
+   </a>
+   <a
+    href="https://web.facebook.com/aldi.maulana.1420/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandFacebook
+     className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+    />
+   </a>
+   <a href="https://t.me/maaaauuuullll/" target="_blank" rel="noopener noreferrer">
+    <TbBrandTelegram
+     className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+    />
+   </a>
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandLinkedin
+     className="w-7 h-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+    />
+   </a>
+  </div>
+ </div>
+</div>
+
+<style>
+ .hero-nav a {
+  @apply px-2 py-1 rounded-full;
+ }
+ .hero-nav a:hover {
+  @apply dark:bg-neutral-25 bg-neutral-90 dark:text-neutral-90 text-neutral-25;
+ }
+</style>

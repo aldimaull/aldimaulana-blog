@@ -1,0 +1,78 @@
+---
+export type Props = {
+ pageHeadings: Array<{ depth: number; text: string; slug: string }>;
+};
+
+const { pageHeadings } = Astro.props;
+---
+
+<aside id="toc">
+ <p>Table of Contents</p>
+ <ul>
+  {
+   pageHeadings.map((h) => {
+    return (
+     <li>
+      {" "}
+      <a href={`#${h.slug}`}>{h.text}</a>
+     </li>
+    );
+   })
+  }
+ </ul>
+</aside>
+
+<script>
+ const setCurrentHeading: IntersectionObserverCallback = (entries) => {
+  // loop to each entries (headings) in the page
+  for (let entry of entries) {
+   // equivalent to the slug returned from pageHeadings
+   const { id } = entry.target;
+   // get the TOC link's element for the current entry
+   const tocLinkEl = document.querySelector(`#toc a[href='#${id}']`);
+   if (!tocLinkEl) return;
+   // check if the entry is intersecting
+   if (entry.isIntersecting) {
+    // remove active class from all links
+    document
+     .querySelectorAll("#toc a")
+     .forEach((e) => e.classList.remove("active"));
+    // add active class to the currently active entry
+    tocLinkEl.classList.add("active");
+   }
+  }
+ };
+ const observerOptions = {
+  threshold: 1,
+  rootMargin: "0px 0px -66%",
+ };
+
+ const observer = new IntersectionObserver(setCurrentHeading, observerOptions);
+ // select all headings to observe
+ const elToObserve = document.querySelectorAll(
+  "article :is(h1,h2,h3,h4,h5,h6)"
+ );
+ // finally, observe the elements
+ elToObserve.forEach((el) => observer.observe(el));
+</script>
+
+<style>
+ #toc {
+  @apply xl:sticky top-0 left-0 pr-8 pt-6 xl:w-1/5 w-auto mx-auto xl:mx-0 xl:float-right max-w-sm;
+ }
+ ul {
+  list-style: none;
+ }
+ a {
+  @apply text-neutral-40 dark:text-neutral-80;
+  text-decoration: none;
+ }
+ a.active {
+  @apply text-tertiary-40 dark:text-tertiary-80;
+  font-weight: 500;
+ }
+
+ p {
+  @apply text-primary-40 dark:text-primary-80 font-extrabold;
+ }
+</style>

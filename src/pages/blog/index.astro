@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/MainLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Card from "../../components/Card.astro";
+
+const allPosts = await Astro.glob("./*.md");
+---
+
+<Layout title="Blog" description="Blog Page">
+ <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
+  <div>
+   <Navbar />
+  </div>
+  <div class="w-full">
+   <Header
+    title="My Post"
+    coverPhoto="https://lh3.googleusercontent.com/4lVyZj_pYByZSDxuL1o-us6nihWwgD9F5d6HjS6IyP4uxtSO-P3WNqA48hWSVq70q5riU9cJGXCGjbrmFp6KCk-G9MAXyZGehRqgnndJxZrEbCMRiXc=w960"
+   />
+   {
+    allPosts.map((post) => (
+     <Card posts={post.frontmatter} url={post.url} />
+    ))
+   }
+   <Footer />
+  </div>
+ </div>
+</Layout>

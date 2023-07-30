@@ -1,0 +1,15 @@
+---
+// layouts import
+import Layout from "../layouts/MainLayout.astro";
+
+// components import
+import Hero from "../components/Hero.astro";
+import Toggle from "../components/Toggle";
+---
+
+<Layout title="Aldi Maulana" description="Aldi Maulana's Personal Website">
+ <div class="fixed top-0 right-0 p-4">
+ <Toggle client:visible/>
+  </div>
+ <Hero />
+</Layout>

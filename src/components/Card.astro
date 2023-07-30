@@ -1,0 +1,42 @@
+---
+import authorImage from "../images/fotoSaya.jpg";
+const { posts, url } = Astro.props;
+---
+
+<div
+ class="grid md:grid-cols-2 gap-2 items-center wrap content-start md:max-w-4xl mx-auto my-10 p-2"
+>
+ <div
+  class="rounded-3xl dark:bg-neutral-variant-30 bg-neutral-variant-90 dark:text-neutral-variant-90 text-neutral-variant-30 overflow-hidden"
+ >
+  <a
+   href={url}
+   class="flex flex-col dark:hover:bg-primary-40 hover:bg-primary-90 duration-200"
+  >
+   <div
+    class="thumbnail-container h-48 w-full bg-center bg-cover rounded-3xl"
+    style=`background-image: url(${posts.image.src});`
+   >
+   </div>
+   <div class="p-4">
+    <span class="font-semibold stext-xl"> {posts.title}</span>
+    <div class="flex justify-between mt-2 items-center">
+     <div class="flex items-center">
+      <img src={authorImage} alt="" class="bg-cover w-6 rounded-full mr-2" />
+      <h5 class="text-xs">{posts.author}</h5>
+     </div>
+     <h5 class="text-xs">
+      {
+       new Date(posts.date).toLocaleDateString("id-ID", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+       })
+      }
+     </h5>
+    </div>
+   </div>
+  </a>
+ </div>
+</div>

@@ -1,0 +1,47 @@
+---
+// layout import
+import Head from "./MainHead.astro";
+
+// typescript
+interface Props {
+ title: string;
+ description: string;
+}
+
+// props
+const { title, description } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+ <Head {title} {description} />
+ <body>
+  <slot />
+  <script is:inline>
+   const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+     return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+     return "dark";
+    }
+    return "light";
+   })();
+
+   if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+   } else {
+    document.documentElement.classList.add("dark");
+   }
+   window.localStorage.setItem("theme", theme);
+
+   const table = document.querySelector("table");
+   const parent = table.parentNode;
+   const wrapper = document.createElement("div");
+   wrapper.classList.add("table-wrapper");
+
+   parent.replaceChild(wrapper, table);
+   wrapper.appendChild(table);
+  </script>
+ </body>
+</html>

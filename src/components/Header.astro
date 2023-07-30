@@ -1,0 +1,30 @@
+---
+const { title, coverPhoto, date, author } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-2 p-2 dark:bg-neutral-10 bg-neutral-98">
+ <div
+  class="bg-neutral-variant-95 dark:bg-neutral-variant-20 md:h-[544px] md:p-12 p-6 flex flex-col justify-center break-words rounded-3xl"
+ >
+  <h6
+   class="font-normal text-neutral-variant-20 dark:text-neutral-variant-95/50 text-sm"
+  >
+   {date}
+  </h6>
+  <h1 class="font-medium text-primary-20 dark:text-primary-95 text-6xl my-4">
+   {title}
+  </h1>
+  <h5
+   class="font-normal text-neutral-variant-20 dark:text-neutral-variant-95 text-md"
+  >
+   {author}
+  </h5>
+ </div>
+ <div
+  class="h-80 md:h-[544px] overflow-hidden w-full bg-center bg-cover rounded-3xl"
+  style={{
+   backgroundImage: `url(${coverPhoto})`,
+  }}
+ >
+ </div>
+</div>

@@ -1,0 +1,37 @@
+---
+// layout import
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "./MainLayout.astro";
+import TOC from "../components/TOC.astro";
+
+// styles
+import "../styles/global.css";
+
+// utils
+import { formatDate } from "../js/utils.js";
+
+// props
+const { frontmatter, headings } = Astro.props;
+const date = formatDate(frontmatter.date);
+const { title, description, author, image } = frontmatter;
+---
+
+<Layout {title} {description}>
+ <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
+  <div>
+   <Navbar />
+  </div>
+  <div class="w-full">
+   <Header {title} {author} {date} coverPhoto={image.src} />
+   <TOC pageHeadings={headings} />
+   <div class="mx-auto rounded-xl pt-4 pb-4 md:max-w-2xl items-center max-w-sm">
+    <article>
+     <slot />
+    </article>
+   </div>
+   <Footer />
+  </div>
+ </div>
+</Layout>
