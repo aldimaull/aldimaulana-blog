@@ -2,19 +2,13 @@
 // layout import
 import Head from "./MainHead.astro";
 
-// typescript
-interface Props {
- title: string;
- description: string;
-}
-
 // props
-const { title, description } = Astro.props as Props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
- <Head {title} {description} />
+ <Head title={title} description={description} />
  <body>
   <slot />
   <script is:inline type="module">
