@@ -23,13 +23,21 @@ const { title, description, author, image } = frontmatter;
   <div>
    <Navbar />
   </div>
-  <div class="w-full">
-   <Header {title} {author} {date} coverPhoto={image.src} />
-   <TOC pageHeadings={headings} />
-   <div class="mx-auto rounded-xl pt-4 pb-4 md:max-w-2xl items-center max-w-sm">
-    <article>
+  <div class="xl:flex xl:mx-auto xl:flex-col">
+   <div class="w-full">
+    <Header {title} {author} {date} coverPhoto={image.src} />
+   </div>
+   <div class="flex md:flex-row flex-col-reverse py-4">
+    <article
+     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto md:p-4"
+    >
      <slot />
     </article>
+    <div
+     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm mx-auto mb-4"
+    >
+     <TOC pageHeadings={headings} />
+    </div>
    </div>
    <Footer />
   </div>

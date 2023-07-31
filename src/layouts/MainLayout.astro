@@ -7,9 +7,11 @@ const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden md:overflow-visible">
  <Head title={title} description={description} />
- <body>
+ <body
+  class="overflow-x-hidden md:overflow-visible dark:bg-neutral-10 bg-neutral-98"
+ >
   <slot />
   <script is:inline type="module">
    const theme = (() => {

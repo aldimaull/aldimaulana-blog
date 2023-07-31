@@ -22,27 +22,21 @@ const { pageHeadings } = Astro.props;
  </ul>
 </aside>
 
-<script type="module">
- let setCurrentHeading: IntersectionObserverCallback;
- setCurrentHeading = (entries) => {
-  // loop to each entries (headings) in the page
+<script>
+ const setCurrentHeading = (entries: IntersectionObserverEntry[]) => {
   for (let entry of entries) {
-   // equivalent to the slug returned from pageHeadings
-   const {id} = entry.target;
-   // get the TOC link's element for the current entry
+   const { id } = entry.target;
    const tocLinkEl = document.querySelector(`#toc a[href='#${id}']`);
    if (!tocLinkEl) return;
-   // check if the entry is intersecting
    if (entry.isIntersecting) {
-    // remove active class from all links
     document
-        .querySelectorAll("#toc a")
-        .forEach((e) => e.classList.remove("active"));
-    // add active class to the currently active entry
+     .querySelectorAll("#toc a")
+     .forEach((e) => e.classList.remove("active"));
     tocLinkEl.classList.add("active");
    }
   }
  };
+ console.log(setCurrentHeading);
  const observerOptions = {
   threshold: 1,
   rootMargin: "0px 0px -66%",
@@ -59,9 +53,9 @@ const { pageHeadings } = Astro.props;
 
 <style>
  #toc {
-  @apply xl:sticky top-0 left-0 pr-8 pt-6 xl:w-1/5 w-auto mx-auto xl:mx-0 xl:float-right max-w-sm;
+  @apply md:sticky md:top-0 md:right-0 md:text-sm md:p-4 md:mx-auto;
  }
- ul {
+ s ul {
   list-style: none;
  }
  a {
