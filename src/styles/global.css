@@ -52,7 +52,7 @@ article em {
 }
 
 article p {
- @apply my-4 leading-5 sm:leading-normal md:leading-relaxed lg:leading-loose text-xs sm:text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl  dark:text-neutral-90 text-neutral-10;
+ @apply my-4 leading-5 sm:leading-normal md:leading-relaxed lg:leading-loose text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl  dark:text-neutral-90 text-neutral-10;
 }
 
 article ul {
@@ -65,7 +65,7 @@ article ul div {
 }
 
 article ul li {
- @apply dark:text-neutral-90 text-neutral-10;
+ @apply dark:text-neutral-90 text-neutral-10 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl;
 }
 
 article ol {
@@ -79,7 +79,7 @@ article ol div {
 article ol li {
  counter-increment: li;
  display: list-item;
- @apply dark:text-neutral-90 text-neutral-10;
+ @apply dark:text-neutral-90 text-neutral-10 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl;
 }
 
 article ol li::marker {
@@ -94,7 +94,7 @@ article .alert p {
 }
 
 article code {
- @apply bg-neutral-variant-90 dark:bg-neutral-variant-20 text-neutral-variant-10 dark:text-neutral-variant-80 px-1 rounded-md;
+ @apply bg-neutral-variant-90 dark:bg-neutral-variant-20 text-neutral-variant-10 dark:text-neutral-variant-80 px-1 rounded-md text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl;
 }
 
 article pre {
@@ -114,7 +114,7 @@ article table {
 }
 
 article table p {
- @apply text-base my-2;
+ @apply my-2 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl;
 }
 
 article th {
