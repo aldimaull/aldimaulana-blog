@@ -23,8 +23,10 @@ const { title, description, author, image } = frontmatter;
   <div>
    <Navbar />
   </div>
-  <div class="xl:flex xl:mx-auto xl:flex-col">
-   <div class="w-full">
+  <div class="xl:flex xl:mx-auto xl:flex-col mx-auto">
+   <div
+    class="w-full max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-full mx-auto"
+   >
     <Header {title} {author} {date} coverPhoto={image.src} />
    </div>
    <div class="flex md:flex-row flex-col-reverse py-4">

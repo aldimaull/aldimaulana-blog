@@ -4,7 +4,7 @@ title: Yeay! Postingan Pertama 🚀
 author: Aldi Maulana
 date: 2023-7-28
 slug: post-1
-image: { src: "/coverPost/bgHero.png", alt: "Ini coba" }
+image: { src: "/coverPost/cover-post-1.png", alt: "Contoh" }
 key: 1
 ---
 

@@ -14,10 +14,7 @@ const allPosts = await Astro.glob("./*.md");
    <Navbar />
   </div>
   <div class="w-full mx-auto">
-   <Header
-    title="My Post"
-    coverPhoto="https://lh3.googleusercontent.com/4lVyZj_pYByZSDxuL1o-us6nihWwgD9F5d6HjS6IyP4uxtSO-P3WNqA48hWSVq70q5riU9cJGXCGjbrmFp6KCk-G9MAXyZGehRqgnndJxZrEbCMRiXc=w960"
-   />
+   <Header title="My Post" coverPhoto="../../public/blog-cover.png" />
    {allPosts.map((post) => <Card posts={post.frontmatter} url={post.url} />)}
    <Footer />
   </div>
