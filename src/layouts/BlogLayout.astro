@@ -4,18 +4,30 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "./MainLayout.astro";
+import Badge from "../components/Badge.astro";
 import TOC from "../components/TOC.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+import { slugify } from "../js/utils.js";
 
 // styles
 import "../styles/global.css";
 
 // utils
-import { formatDate } from "../js/utils.js";
+import { formatDate, formatBlogPosts } from "../js/utils.js";
 
 // props
 const { frontmatter, headings } = Astro.props;
 const date = formatDate(frontmatter.date);
-const { title, description, author, image } = frontmatter;
+const { title, description, author, image, category } = frontmatter;
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts, { sortByDate: false });
+const relatedPosts = formattedPosts
+ .filter(
+  (post) =>
+   post.frontmatter.category === category && post.frontmatter.title !== title
+ )
+ .slice(0, 3);
 ---
 
 <Layout {title} {description}>
@@ -23,22 +35,42 @@ const { title, description, author, image } = frontmatter;
   <div>
    <Navbar />
   </div>
-  <div class="xl:flex xl:mx-auto xl:flex-col mx-auto">
+  <div class="xl:flex xl:mx-auto xl:flex-col mx-auto w-full">
    <div
     class="w-full max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-full mx-auto"
    >
-    <Header {title} {author} {date} coverPhoto={image.src} />
+    <Header
+     {title}
+     {author}
+     {date}
+     coverPhoto={image.src}
+     {slugify(category)}
+    />
    </div>
    <div class="flex md:flex-row flex-col-reverse py-4">
     <article
-     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto md:p-4"
+     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto md:px-2"
     >
      <slot />
+     {
+      relatedPosts.length > 0 && (
+       <aside>
+        <h5>Related Posts</h5>
+        <RelatedPosts {relatedPosts} />
+       </aside>
+      )
+     }
     </article>
     <div
-     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm mx-auto mb-4"
+     class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm mx-auto mb-4 space-y-2 md:flex md:flex-col-reverse md:items-end md:justify-end justify-start"
     >
      <TOC pageHeadings={headings} />
+     <Badge
+      link={`/category/${slugify(category)}`}
+      text={category}
+      className="capitalize"
+      btnClass="text-xs md:mb-4"
+     />
     </div>
    </div>
    <Footer />

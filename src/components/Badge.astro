@@ -1,0 +1,7 @@
+---
+const { text, link, className, btnClass, count } = Astro.props;
+---
+
+<button class=`p-1 rounded-full bg-secondary-90 text-secondary-10 ${btnClass}`
+ ><a href=`${link}` class=`${className}`>{text}</a></button
+>

@@ -1,0 +1,37 @@
+---
+import { formatBlogPosts, slugify } from "../js/utils.js";
+
+import Badge from "./Badge.astro";
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+const allCategories = formattedPosts
+ .map((cat) => cat.frontmatter.category.toLowerCase())
+ .flat();
+
+const processedCats = allCategories.reduce((acc, category) => {
+ // check if category exists in accumulator
+ const value = acc[category] || 0;
+
+ return {
+  ...acc,
+  [category]: value + 1,
+ };
+}, {});
+
+const { showCount } = Astro.props;
+---
+
+<ul class="categories flex gap-2 justify-center my-4 flex-wrap">
+ {
+  Object.entries(processedCats).map(([key, val]) => (
+   <li>
+    <button class="p-1 rounded-full bg-secondary-90 text-secondary-10 uppercase text-sm">
+     <a href={`/category/${slugify(key)}/`}>
+      {key} {showCount && `(${val})`}
+     </a>
+    </button>
+   </li>
+  ))
+ }
+</ul>

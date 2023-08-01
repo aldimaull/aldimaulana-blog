@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
-title: Yeay! Postingan Pertama 🚀
+title: Akhirnya Post Keempat
 author: Aldi Maulana
-date: 2023-7-28
-category: Contoh aja
+date: 2023-7-31
+category: Hmmm
 slug: post-1
 image: { src: "/coverPost/cover-post-1.png", alt: "Contoh" }
 key: 1

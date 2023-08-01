@@ -53,7 +53,7 @@ const { pageHeadings } = Astro.props;
 
 <style>
  #toc {
-  @apply md:sticky md:top-0 md:right-0 md:text-sm md:p-4 md:mx-auto;
+  @apply md:sticky md:top-0 md:right-0 md:text-sm md:py-4 md:mx-auto md:text-right;
  }
  s ul {
   list-style: none;
@@ -63,8 +63,7 @@ const { pageHeadings } = Astro.props;
   text-decoration: none;
  }
  a.active {
-  @apply text-tertiary-40 dark:text-tertiary-80;
-  font-weight: 500;
+  @apply text-tertiary-40 dark:text-tertiary-80 font-bold;
  }
 
  p {

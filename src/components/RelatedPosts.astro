@@ -1,0 +1,15 @@
+---
+import { slugify, formatDate } from "../js/utils.js";
+
+const { relatedPosts } = Astro.props;
+---
+
+{
+ relatedPosts.map((post) => (
+  <div>
+   <h6 class="decoration-transparent">
+    <a href={post.url}>{post.frontmatter.title}</a>
+   </h6>
+  </div>
+ ))
+}

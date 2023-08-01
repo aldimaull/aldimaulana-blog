@@ -1,0 +1,20 @@
+---
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav>
+ {
+  prevUrl && (
+   <button class="p-2 rounded-full bg-tertiary-90 text-tertiary-10 dark:bg-tertiary-30 dark:text-tertiary-90 text-sm">
+    <a href={prevUrl}>Sebelumnya</a>
+   </button>
+  )
+ }
+ {
+  nextUrl && (
+   <button class="p-2 rounded-full bg-tertiary-90 text-tertiary-10 dark:bg-tertiary-30 dark:text-tertiary-90 text-sm">
+    <a href={nextUrl}>Selanjutnya</a>
+   </button>
+  )
+ }
+</nav>
