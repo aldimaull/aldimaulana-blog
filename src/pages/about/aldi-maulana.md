@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogLayout.astro"
+layout: "../../layouts/AboutLayout.astro"
 title: Yeay! Postingan Pertama 🚀
 author: Aldi Maulana
 date: 2023-7-28

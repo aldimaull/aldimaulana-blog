@@ -9,23 +9,29 @@ import Footer from "../components/Footer.astro";
 
 // assets import
 import aboutImage from "../../images/about.jpg";
+
+// styles
+import "../styles/global.css";
+
+const { frontmatter } = Astro.props;
+const { title, description, author, image } = frontmatter;
 ---
 
 <Layout {title} {description}>
-    <div class="h-full bg-neutral-98 dark:bg-neutral-10 md:flex">
-        <div>
-            <Navbar/>
-        </div>
-        <div class="w-full">
-            <Header title="About me" coverPhoto={aboutImage} />
-            <div class="mt-8 max-w-4xl mx-auto">
-                <div class="flex text-neutral-10 dark:text-neutral-90">
-                    <div class="ms-20">
-                        <slot/>
-                    </div>
-                </div>
-            </div>
-            <Footer />
-        </div>
+ <div class="h-full bg-neutral-98 dark:bg-neutral-10 md:flex">
+  <div>
+   <Navbar />
+  </div>
+  <div class="w-full">
+   <Header title="About me" coverPhoto={aboutImage} />
+   <div class="mt-8 max-w-4xl mx-auto">
+    <div class="flex text-neutral-10 dark:text-neutral-90">
+     <article class="ms-20">
+      <slot />
+     </article>
     </div>
+   </div>
+   <Footer />
+  </div>
+ </div>
 </Layout>
