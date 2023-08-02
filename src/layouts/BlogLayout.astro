@@ -20,7 +20,7 @@ const { frontmatter, headings } = Astro.props;
 const date = formatDate(frontmatter.date);
 const { title, description, author, image, category } = frontmatter;
 
-const allPosts = await Astro.glob("../pages/blog/*.md");
+const allPosts = await Astro.glob("../pages/blog/*.{md,mdx}");
 const formattedPosts = formatBlogPosts(allPosts, { sortByDate: false });
 const relatedPosts = formattedPosts
  .filter(
