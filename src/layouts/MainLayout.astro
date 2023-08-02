@@ -3,12 +3,12 @@
 import Head from "./MainHead.astro";
 
 // props
-const { title, description } = Astro.props;
+const { title, description, image, frontmatter, robots } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" class="overflow-x-hidden md:overflow-visible">
- <Head title={title} description={description} />
+ <Head {title} {description} {image} {frontmatter} {robots} />
  <body
   class="overflow-x-hidden md:overflow-visible dark:bg-neutral-10 bg-neutral-98"
  >

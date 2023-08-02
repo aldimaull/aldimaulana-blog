@@ -30,7 +30,14 @@ const relatedPosts = formattedPosts
  .slice(0, 3);
 ---
 
-<Layout {title} {description}>
+<Layout
+ {title}
+ {description}
+ image={frontmatter.image}
+ {image}
+ {frontmatter}
+ robots={frontmatter.robots}
+>
  <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
   <div>
    <Navbar />
