@@ -13,7 +13,7 @@ export async function getStaticPaths({ paginate }) {
  const allPosts = await Astro.glob("./*.{md,mdx}");
  const formattedPosts = formatBlogPosts(allPosts);
 
- return paginate(formattedPosts, { pageSize: 3 });
+ return paginate(formattedPosts, { pageSize: 4 });
 }
 
 const { page } = Astro.props;

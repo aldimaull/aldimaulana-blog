@@ -3,7 +3,7 @@ import { formatBlogPosts, slugify } from "../js/utils.js";
 
 import Badge from "./Badge.astro";
 
-const allPosts = await Astro.glob("../pages/blog/*.md");
+const allPosts = await Astro.glob("../pages/blog/*.{md,mdx}");
 const formattedPosts = formatBlogPosts(allPosts);
 const allCategories = formattedPosts
  .map((cat) => cat.frontmatter.category.toLowerCase())
