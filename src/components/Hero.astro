@@ -3,90 +3,92 @@ import fotoSaya from "../images/fotoSaya.png";
 
 import pkg from "react-icons/tb/index.js";
 const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
-  pkg;
+ pkg;
 ---
 
 <div
-  class="flex mx-auto flex-col items-center justify-center dark:text-neutral-98 text-neutral-10 font-sans dark:bg-neutral-10 bg-neutral-98 h-screen w-screen text-sm sm:text-lg md:text-xl max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
+ class="flex mx-auto flex-col items-center justify-center dark:text-on-surface-dark text-on-surface-light font-sans dark:bg-background-dark bg-background-light h-screen w-screen text-sm sm:text-lg md:text-xl max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl"
 >
-  <div
-    class="flex text-center items-center font-bold uppercase dark:text-primary-80 text-primary-40 tracking-[.5em]"
+ <div
+  class="flex text-center items-center font-bold uppercase dark:text-primary-dark text-primary-light tracking-[.5em]"
+ >
+  <span>Selamat Datang</span>
+ </div>
+ <img
+  class="mt-6 h-40 w-40 rounded-full border-4 border-outline-light dark:border-outline-dark"
+  src={fotoSaya}
+  alt="Foto Aldi Maulana"
+ />
+ <h1 class="mt-6 text-xl sm:text-3xl md:text-4xl">
+  Halo👋, Saya{" "}
+  <span
+   class="animate-gradient bg-gradient-to-bl from-primary-light via-secondary-light to-tertiary-light dark:from-primary-dark dark:via-secondary-dark dark:to-tertiary-dark bg-[length:400%_400%] bg-clip-text font-bold text-transparent"
   >
-    <span>Selamat Datang</span>
-  </div>
-  <img
-    class="mt-6 h-40 w-40 rounded-full border-4 border-outlinelight dark:border-outlinedark"
-    src={fotoSaya}
-    alt="Foto Aldi Maulana"
-  />
-  <h1
-    class="mt-6 dark:text-neutral-98 text-neutral-10 text-xl sm:text-3xl md:text-4xl"
+   Aldi Maulana
+  </span>
+ </h1>
+ <p class="mt-2 text-center">Student, Learner, and Developer.</p>
+ <div class="hero-nav flex my-4 justify-evenly w-full">
+  <a
+   href="/blog"
+   class="dark:bg-surface-lowest-dark bg-surface-highest-light px-3">Blog</a
   >
-    Halo👋, Saya{" "}
-    <span
-      class="animate-gradient bg-gradient-to-bl from-primary-80 via-secondary-80 to-tertiary-80 bg-[length:400%_400%] bg-clip-text font-bold text-transparent"
-    >
-      Aldi Maulana
-    </span>
-  </h1>
-  <p class="mt-2 text-center">
-    Student, Learner, and Developer. Lorem ipsum dolor sit amet consectetur
-    adipisicing elit. Blanditiis, aperiam impedit modi sed provident dolor fugit
-    recusandae autem mollitia similique eum temporibus, iste quos sapiente
-    deserunt! Omnis officiis voluptatem alias.
-  </p>
-  <div class="hero-nav flex my-4 justify-evenly w-full">
-    <a href="/blog" class="dark:bg-neutral-20 bg-neutral-90 px-3">Blog</a>
-    <a href="/about" class="dark:bg-neutral-20 bg-neutral-90 px-3">About</a>
-    <a href="/contact" class="dark:bg-neutral-20 bg-neutral-90 px-3">Contact</a>
+  <a
+   href="/about"
+   class="dark:bg-surface-lowest-dark bg-surface-highest-light px-3">About</a
+  >
+  <a
+   href="/contact"
+   class="dark:bg-surface-lowest-dark bg-surface-highest-light px-3">Contact</a
+  >
+ </div>
+ <div class="w-full">
+  <div class="mt-2 flex justify-evenly gap-4">
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandInstagram
+     className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+    />
+   </a>
+   <a
+    href="https://web.facebook.com/aldi.maulana.1420/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandFacebook
+     className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+    />
+   </a>
+   <a
+    href="https://t.me/maaaauuuullll/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandTelegram
+     className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+    />
+   </a>
+   <a
+    href="https://instagram.com/aldimaull/"
+    target="_blank"
+    rel="noopener noreferrer"
+   >
+    <TbBrandLinkedin
+     className="w-7 h-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+    />
+   </a>
   </div>
-  <div class="w-full">
-    <div class="mt-2 flex justify-evenly gap-4">
-      <a
-        href="https://instagram.com/aldimaull/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TbBrandInstagram
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
-        />
-      </a>
-      <a
-        href="https://web.facebook.com/aldi.maulana.1420/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TbBrandFacebook
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
-        />
-      </a>
-      <a
-        href="https://t.me/maaaauuuullll/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TbBrandTelegram
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
-        />
-      </a>
-      <a
-        href="https://instagram.com/aldimaull/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <TbBrandLinkedin
-          className="w-7 h-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
-        />
-      </a>
-    </div>
-  </div>
+ </div>
 </div>
 
 <style>
-  .hero-nav a {
-    @apply px-2 py-1 rounded-full;
-  }
-  .hero-nav a:hover {
-    @apply dark:bg-neutral-25 bg-neutral-90 dark:text-neutral-90 text-neutral-25;
-  }
+ .hero-nav a {
+  @apply px-2 py-1 rounded-full;
+ }
+ .hero-nav a:hover {
+  @apply dark:bg-surface-low-dark bg-surface-low-light dark:text-on-surface-dark text-on-surface-light;
+ }
 </style>

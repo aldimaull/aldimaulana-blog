@@ -38,7 +38,7 @@ const relatedPosts = formattedPosts
  {frontmatter}
  robots={frontmatter.robots}
 >
- <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
+ <div class="h-full md:flex">
   <div>
    <Navbar />
   </div>
@@ -61,13 +61,16 @@ const relatedPosts = formattedPosts
      <slot />
      {
       relatedPosts.length > 0 && (
-       <aside>
+       <aside class="mb-4">
         <h5>Related Posts</h5>
         <RelatedPosts {relatedPosts} />
        </aside>
       )
      }
-     <div class="giscus p-2 rounded-xl bg-tertiary-40"></div>
+     <div
+      class="giscus p-2 rounded-xl bg-tertiary-container-light dark:bg-tertiary-container-dark"
+     >
+     </div>
     </article>
     <div
      class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm mx-auto mb-4 space-y-2 md:flex md:flex-col-reverse md:items-end md:justify-end justify-start"

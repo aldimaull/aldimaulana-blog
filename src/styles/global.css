@@ -3,16 +3,92 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+ :root {
+  --color-primary-light: 0 106 104;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 111 247 243;
+  --color-on-primary-container-light: 0 32 31;
+  --color-secondary-light: 74 99 98;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 204 232 230;
+  --color-on-secondary-container-light: 5 31 31;
+  --color-tertiary-light: 74 96 123;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 210 228 255;
+  --color-on-tertiary-container-light: 2 29 53;
+  --color-error-light: 186 26 26;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-light: 255 255 255;
+  --color-on-error-container-light: 65 0 2;
+  --color-background-light: 250 253 252;
+  --color-on-background-light: 25 28 28;
+  --color-surface-light: 250 253 252;
+  --color-on-surface-light: 25 28 28;
+  --color-surface-variant-light: 218 229 227;
+  --color-on-surface-variant-light: 63 73 72;
+  --color-outline-light: 111 121 120;
+  --color-inverse-on-surface-light: 239 241 240;
+  --color-inverse-surface-light: 45 49 49;
+  --color-inverse-primary-light: 77 218 214;
+  --color-shadow-light: 0 0 0;
+  --color-surface-tint-light: 0 106 104;
+  --color-outline-variant-light: 190 201 199;
+  --color-scrim-light: 0 0 0;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 242 244 243;
+  --color-surface-container-light: 236 238 237;
+  --color-surface-high-light: 230 233 232;
+  --color-surface-highest-light: 224 227 226;
+
+  --color-primary-dark: 77 218 214;
+  --color-on-primary-dark: 0 55 54;
+  --color-primary-container-dark: 0 80 78;
+  --color-on-primary-container-dark: 111 247 243;
+  --color-secondary-dark: 176 204 202;
+  --color-on-secondary-dark: 27 53 52;
+  --color-secondary-container-dark: 50 75 74;
+  --color-on-secondary-container-dark: 204 232 230;
+  --color-tertiary-dark: 178 200 232;
+  --color-on-tertiary-dark: 27 50 75;
+  --color-tertiary-container-dark: 50 72 99;
+  --color-on-tertiary-container-dark: 210 228 255;
+  --color-error-dark: 255 180 171;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-dark: 105 0 5;
+  --color-on-error-container-dark: 255 218 214;
+  --color-background-dark: 25 28 28;
+  --color-on-background-dark: 224 227 226;
+  --color-surface-dark: 25 28 28;
+  --color-on-surface-dark: 224 227 226;
+  --color-surface-variant-dark: 63 73 72;
+  --color-on-surface-variant-dark: 190 201 199;
+  --color-outline-dark: 136 147 146;
+  --color-inverse-on-surface-dark: 25 28 28;
+  --color-inverse-surface-dark: 224 227 226;
+  --color-inverse-primary-dark: 0 106 104;
+  --color-shadow-dark: 0 0 0;
+  --color-surface-tint-dark: 77 218 214;
+  --color-outline-variant-dark: 63 73 72;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-lowest-dark: 50 53 53;
+  --color-surface-low-dark: 39 43 42;
+  --color-surface-container-dark: 29 32 32;
+  --color-surface-high-dark: 25 28 28;
+  --color-surface-highest-dark: 11 15 15;
+ }
+}
+
 *::-webkit-scrollbar {
  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
- @apply bg-neutral-98 dark:bg-neutral-10;
+ @apply bg-surface-light dark:bg-surface-dark;
 }
 
 *::-webkit-scrollbar-thumb {
- @apply dark:bg-tertiary-80 bg-tertiary-40 rounded-full;
+ @apply dark:bg-tertiary-dark bg-tertiary-light rounded-full;
 }
 
 .material-symbols-rounded {
@@ -24,35 +100,35 @@
 }
 
 article h1 {
- @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl dark:text-secondary-80 text-secondary-40;
+ @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl dark:text-secondary-dark text-secondary-light;
 }
 
 article h2 {
- @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-secondary-80 text-secondary-40;
+ @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-secondary-dark text-secondary-light;
 }
 article h3 {
- @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl dark:text-secondary-80 text-secondary-40;
+ @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl dark:text-secondary-dark text-secondary-light;
 }
 article h4 {
- @apply text-2xl dark:text-secondary-80 text-secondary-40;
+ @apply text-2xl dark:text-secondary-dark text-secondary-light;
 }
 article h5 {
- @apply text-xl dark:text-secondary-80 text-secondary-40;
+ @apply text-xl dark:text-secondary-dark text-secondary-light;
 }
 article h6 {
- @apply text-lg dark:text-secondary-80 text-secondary-40;
+ @apply text-lg dark:text-secondary-dark text-secondary-light;
 }
 
 article a {
- @apply underline decoration-2 font-semibold text-tertiary-40 dark:text-tertiary-80 hover:text-tertiary-40/70 dark:hover:text-tertiary-80/70 duration-300;
+ @apply underline decoration-2 font-semibold text-tertiary-light dark:text-tertiary-dark hover:text-tertiary-light/70 dark:hover:text-tertiary-dark/70 duration-300;
 }
 
 article em {
- @apply font-bold dark:bg-tertiary-80 dark:text-tertiary-20 text-tertiary-100 bg-tertiary-40 px-1 rounded-sm;
+ @apply font-bold dark:bg-tertiary-dark dark:text-on-tertiary-dark text-on-tertiary-light bg-tertiary-light px-1 rounded-sm;
 }
 
 article p {
- @apply my-4 leading-relaxed sm:leading-normal md:leading-relaxed lg:leading-loose xl:leading-9 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased  dark:text-neutral-90 text-neutral-10;
+ @apply my-4 leading-relaxed sm:leading-normal md:leading-relaxed lg:leading-loose xl:leading-9 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased  dark:text-on-background-dark text-on-background-light;
 }
 
 article ul {
@@ -65,7 +141,7 @@ article ul div {
 }
 
 article ul li {
- @apply dark:text-neutral-90 text-neutral-10 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+ @apply dark:text-on-background-dark text-on-background-light text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
 }
 
 article ol {
@@ -79,26 +155,26 @@ article ol div {
 article ol li {
  counter-increment: li;
  display: list-item;
- @apply dark:text-neutral-90 text-neutral-10 text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+ @apply dark:text-on-background-dark text-on-background-light text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
 }
 
 article ol li::marker {
  display: none;
  content: "#" counter(li) " ";
- @apply dark:text-tertiary-80 text-tertiary-20;
+ @apply dark:text-tertiary-dark text-tertiary-light;
  font-weight: bold;
 }
 
 article .alert p {
- @apply dark:bg-error-80 dark:text-error-20 bg-error-40 text-error-90 leading-6 font-extrabold border-none rounded-xl p-4;
+ @apply dark:bg-error-dark dark:text-on-error-dark bg-error-light text-on-error-light leading-6 font-extrabold border-none rounded-xl p-4;
 }
 
 article code {
- @apply bg-neutral-variant-90 dark:bg-neutral-variant-20 text-neutral-variant-10 dark:text-neutral-variant-80 px-1 rounded-md text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
+ @apply dark:bg-primary-container-dark bg-primary-container-light text-on-primary-container-light dark:text-on-primary-container-dark px-1 rounded-md text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl font-serif subpixel-antialiased;
 }
 
 article pre {
- @apply p-4 rounded-3xl bg-neutral-variant-30 overflow-auto !important;
+ @apply p-4 rounded-3xl bg-primary-container-dark text-on-primary-container-dark overflow-auto !important;
 }
 
 article pre::-webkit-scrollbar {
@@ -118,23 +194,23 @@ article table p {
 }
 
 article th {
- @apply font-bold dark:bg-neutral-variant-20 bg-neutral-variant-90 dark:text-neutral-variant-95 text-neutral-variant-30 p-2 pl-4;
+ @apply font-bold dark:bg-surface-low-dark bg-surface-low-light text-on-surface-variant-light dark:text-on-surface-variant-dark p-2 pl-4;
 }
 
 article tr {
- @apply border-b border-neutral-variant-50 dark:border-neutral-variant-60;
+ @apply border-b border-outline-light dark:border-outline-dark;
 }
 
 article td {
- @apply dark:bg-neutral-10 bg-neutral-98 dark:text-neutral-90 text-neutral-10 px-4 py-2;
+ @apply dark:bg-surface-dark bg-surface-light dark:text-on-background-dark text-on-background-light px-4 py-2;
 }
 
 article .table-wrapper {
- @apply rounded-xl border overflow-hidden border-neutral-variant-50 dark:border-neutral-variant-60;
+ @apply rounded-xl border overflow-hidden border-outline-light dark:border-outline-dark;
 }
 
 article blockquote {
- @apply text-justify border-l-4 dark:border-tertiary-80 dark:text-tertiary-80 text-tertiary-40 border-tertiary-40 italic my-4 pl-8;
+ @apply text-justify border-l-4 dark:border-outline-dark dark:text-tertiary-dark text-tertiary-light border-tertiary-light italic my-4 pl-8;
  font-family: Georgia, Times, "Times New Roman", serif;
  font-size: 1.25em;
  font-style: italic;
@@ -146,7 +222,7 @@ article blockquote {
 }
 
 article blockquote::before {
- @apply dark:bg-neutral-variant-10 bg-neutral-variant-98;
+ @apply dark:bg-background-dark bg-background-light;
  content: "";
  position: absolute;
  top: 50%;
@@ -157,7 +233,7 @@ article blockquote::before {
 }
 
 article blockquote::after {
- @apply dark:text-tertiary-40 text-tertiary-80;
+ @apply dark:text-tertiary-light text-tertiary-dark;
  content: "”";
  position: absolute;
  top: 50%;

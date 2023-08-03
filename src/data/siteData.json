@@ -1,8 +1,8 @@
 {
- "title": "My Astro Blog",
+ "title": "Aldi Maulana",
  "description": "My musings about the Astro framework",
  "image": {
   "src": "/images/image-default.jpg",
-  "alt": "My Astro Blog"
+  "alt": "Aldi Maulana's Blog"
  }
 }

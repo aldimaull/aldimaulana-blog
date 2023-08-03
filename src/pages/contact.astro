@@ -1,17 +1,116 @@
 ---
 import Layout from "../layouts/MainLayout.astro";
 import Navbar from "../components/Navbar.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+import pkg from "react-icons/tb/index.js";
+const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
+ pkg;
 ---
 
 <Layout title="Contact Me" description="Contact Page">
  <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
   <div>
-   <Navbar/>
+   <Navbar />
   </div>
   <div class="w-screen">
-   <Header title="Hubungi kami" />
+   <div class="grid xl:grid-cols-2 gap-2 p-2 dark:bg-neutral-10 bg-neutral-98">
+    <div
+     class="bg-surface-container-light dark:bg-surface-lowest-dark xl:h-[544px] md:p-12 break-words rounded-3xl flex flex-col justify-between p-12"
+    >
+     <h1
+      class="font-medium text-primary-light dark:text-primary-dark text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4"
+     >
+      Hubungi Kami.
+     </h1>
+     <div class="flex flex-col gap-4 mt-4">
+      <div>
+       <p
+        class="font-medium text-on-surface-variant-light dark:text-on-surface-variant-dark text-base sm:text-sm md:text-md lg:text-lg my-4"
+       >
+        Saya senang menerima pesan dari pembaca setia saya. Anda juga dapat
+        mengirim saran tentang topik tulisan yang ingin Anda baca di blog ini.
+       </p>
+      </div>
+      <div class="flex gap-4">
+       <a
+        href="https://instagram.com/aldimaull/"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+        <TbBrandInstagram
+         className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+        />
+       </a>
+       <a
+        href="https://web.facebook.com/aldi.maulana.1420/"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+        <TbBrandFacebook
+         className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+        />
+       </a>
+       <a
+        href="https://t.me/aldi_maul/"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+        <TbBrandTelegram
+         className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+        />
+       </a>
+       <a
+        href="https://instagram.com/aldimaull/"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+        <TbBrandLinkedin
+         className="h-7 w-7 text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+        />
+       </a>
+      </div>
+     </div>
+    </div>
+    <div
+     class="h-80 md:h-[544px] w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-container-light dark:bg-surface-lowest-dark flex flex-col justify-center space-y-8 p-12"
+    >
+     <h2
+      class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-primary-light dark:text-primary-dark"
+     >
+      Umpan balik
+     </h2>
+     <div class="text-secondary-light dark:text-secondary-dark">
+      <form
+       action=""
+       class="form-control flex flex-col font-semibold space-y-2"
+      >
+       <label for="nama">Nama Anda</label>
+       <input
+        id="nama"
+        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none"
+       />
+       <label for="email">Email Anda</label>
+       <input
+        id="email"
+        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none"
+       />
+       <label for="pesan">Pesan Anda</label>
+       <textarea
+        id="pesan"
+        placeholder="Masukkan pesan"
+        class="py-3 px-4 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none mb-4"
+        rows="3"></textarea>
+       <button
+        class="w-1/5 dark:bg-tertiary-container-dark bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-on-tertiary-container-dark py-2 rounded-full"
+        type="submit"
+       >
+        Kirim</button
+       >
+      </form>
+     </div>
+    </div>
+   </div>
    <Footer />
   </div>
  </div>

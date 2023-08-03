@@ -17,11 +17,10 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-console.log(page);
 ---
 
 <Layout title="Blog" description="Blog Page">
- <div class="dark:bg-neutral-10 bg-neutral-98 h-full md:flex">
+ <div class="h-full md:flex">
   <div>
    <Navbar />
   </div>

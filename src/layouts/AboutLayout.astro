@@ -18,15 +18,17 @@ const { title, description, author, image } = frontmatter;
 ---
 
 <Layout {title} {description}>
- <div class="h-full bg-neutral-98 dark:bg-neutral-10 md:flex">
+ <div class="h-full md:flex">
   <div>
    <Navbar />
   </div>
   <div class="w-full">
    <Header title="About me" coverPhoto={aboutImage} />
    <div class="mt-8 max-w-4xl mx-auto">
-    <div class="flex text-neutral-10 dark:text-neutral-90">
-     <article class="ms-20">
+    <div class="flex">
+     <article
+      class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-2"
+     >
       <slot />
      </article>
     </div>

@@ -7,7 +7,7 @@ const { posts, url } = Astro.props;
 ---
 
 <div
- class="rounded-3xl dark:bg-neutral-variant-30 bg-neutral-variant-90 dark:text-neutral-variant-90 text-neutral-variant-30 overflow-hidden"
+ class="rounded-3xl dark:bg-surface-variant-dark bg-surface-variant-light dark:text-on-surface-variant-dark text-on-surface-variant-light overflow-hidden"
 >
  <div class="ms-4 mt-2 absolute">
   <Badge
@@ -19,7 +19,7 @@ const { posts, url } = Astro.props;
  </div>
  <a
   href={url}
-  class="flex flex-col dark:hover:bg-primary-40 hover:bg-primary-90 duration-200"
+  class="flex flex-col dark:hover:bg-inverse-primary-dark hover:bg-inverse-primary-light duration-500"
  >
   <div
    class="thumbnail-container h-48 w-full bg-center bg-cover rounded-3xl"

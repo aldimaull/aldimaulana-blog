@@ -19,11 +19,11 @@ const Toggle = () => {
   <>
    <button onClick={handleDarkMode}>
     {theme === "light" ? (
-     <span className="material-symbols-rounded p-4 rounded-full border border-neutral-25 text-neutral-25 hover:bg-neutral-90">
+     <span className="material-symbols-rounded p-4 rounded-full border border-outline-light text-outline-light hover:bg-surface-high-light">
       light_mode
      </span>
     ) : (
-     <span className="material-symbols-rounded p-4 rounded-full border border-neutral-95 text-neutral-95 hover:bg-neutral-30">
+     <span className="material-symbols-rounded p-4 rounded-full border border-outline-dark text-outline-dark hover:bg-surface-lowest-dark">
       dark_mode
      </span>
     )}

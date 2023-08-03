@@ -1,11 +1,14 @@
 ---
-import pkg from "react-icons/tb/index.js"
-const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } = pkg;
+import pkg from "react-icons/tb/index.js";
+const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
+ pkg;
 ---
 
 <footer class="bottom-0 dark:bg-neutral-10 bg-neutral-98">
  <div class="md:max-w-2xl max-w-sm mx-auto">
-  <hr class="bg-neutral-10 h-[1px] border-none dark:bg-neutral-98" />
+  <hr
+   class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
+  />
  </div>
 
  <div
@@ -14,60 +17,68 @@ const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } = 
   <h1
    class="flex uppercase md:text-3xl text-xl md:col-span-2 my-auto justify-center"
   >
-   <span class="font-extrabold dark:text-neutral-90 text-neutral-10">
+   <span class="font-extrabold dark:text-on-surface-dark text-on-surface-light">
     Aldi
    </span>
-   <span class="font-extralight dark:text-primary-80 text-primary-40">
+   <span class="font-extralight dark:text-primary-dark text-primary-light">
     Maulana
    </span>
-   <span class="font-extrabold dark:text-neutral-90 text-neutral-10">_</span>
+   <span class="font-extrabold dark:text-on-surface-dark text-on-surface-light"
+    >_</span
+   >
   </h1>
-  <div class="md:col-span-2 dark:text-gray-200 text-gray-900">
+  <div class="md:col-span-2 dark:text-on-surface-dark text-on-surface-light">
    <ul class="space-x-4 flex justify-center align-middle">
     <li>
      <a
-         href="https://instagram.com/aldimaull/"
-         target="_blank"
-         rel="noopener noreferrer"
+      href="https://instagram.com/aldimaull/"
+      target="_blank"
+      rel="noopener noreferrer"
      >
       <TbBrandInstagram
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+       className="h-7 w-7 text-tertiarylight text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
       />
      </a>
     </li>
     <li>
      <a
-         href="https://web.facebook.com/aldi.maulana.1420/"
-         target="_blank"
-         rel="noopener noreferrer"
+      href="https://web.facebook.com/aldi.maulana.1420/"
+      target="_blank"
+      rel="noopener noreferrer"
      >
       <TbBrandFacebook
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
-      />
-     </a>
-    </li>
-    <li>
-     <a href="https://t.me/aldi_maul/" target="_blank" rel="noopener noreferrer">
-      <TbBrandTelegram
-          className="h-7 w-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+       className="h-7 w-7 text-tertiarylight text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
       />
      </a>
     </li>
     <li>
      <a
-         href="https://instagram.com/aldimaull/"
-         target="_blank"
-         rel="noopener noreferrer"
+      href="https://t.me/aldi_maul/"
+      target="_blank"
+      rel="noopener noreferrer"
+     >
+      <TbBrandTelegram
+       className="h-7 w-7 text-tertiarylight text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
+      />
+     </a>
+    </li>
+    <li>
+     <a
+      href="https://instagram.com/aldimaull/"
+      target="_blank"
+      rel="noopener noreferrer"
      >
       <TbBrandLinkedin
-          className="w-7 h-7 text-tertiarylight duration-500 hover:text-onbackgroundlight dark:group-hover:text-onbackgrounddark dark:text-tertiarydark"
+       className="w-7 h-7 text-tertiarylight text-tertiary-light hover:text-on-surface-light dark:group-hover:text-on-surface-dark dark:text-tertiary-dark"
       />
      </a>
     </li>
    </ul>
   </div>
  </div>
- <p class="py-10 text-center dark:text-gray-300 text-gray-900 text-base">
+ <p
+  class="py-10 text-center dark:text-on-surface-dark text-on-surface-light text-base"
+ >
   Blog ini dibuat oleh kedua 🙌 saya :D
  </p>
 </footer>
