@@ -38,6 +38,11 @@ const { page } = Astro.props;
    <div class="flex justify-center space-y-2 mb-4">
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
    </div>
+   <div class="md:max-w-2xl max-w-sm mx-auto">
+    <hr
+     class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
+    />
+   </div>
    <Footer />
   </div>
  </div>

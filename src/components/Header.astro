@@ -14,18 +14,18 @@ const { title, coverPhoto, date, author } = Astro.props;
    {date}
   </h6>
   <h1
-   class="font-medium text-primary-light dark:text-primary-dark text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4"
+   class="font-bold text-on-surface-light dark:text-on-surface-dark text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 font-display"
   >
    {title}
   </h1>
   <h5
-   class="font-normal text-on-surface-variant-light dark:text-on-surface-variant-dark text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
+   class="font-normal text-on-surface-light dark:text-on-surface-dark text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
   >
    {author}
   </h5>
  </div>
  <div
-  class="h-80 md:h-[544px] overflow-hidden w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-variant-light dark:bg-surface-variant-dark"
+  class="h-80 md:h-[544px] overflow-hidden w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-light dark:bg-surface-dark"
   style={{
    backgroundImage: `url(${coverPhoto})`,
   }}

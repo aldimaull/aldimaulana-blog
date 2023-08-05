@@ -5,6 +5,8 @@ import Head from "./MainHead.astro";
 // styles
 import "../styles/global.css";
 
+import "@fontsource/plus-jakarta-sans";
+
 // props
 const { title, description, image, frontmatter, robots } = Astro.props;
 ---
@@ -33,14 +35,6 @@ const { title, description, image, frontmatter, robots } = Astro.props;
     document.documentElement.classList.add("dark");
    }
    window.localStorage.setItem("theme", theme);
-
-   const table = document.querySelector("table");
-   const parent = table.parentNode;
-   const wrapper = document.createElement("div");
-   wrapper.classList.add("table-wrapper");
-
-   parent.replaceChild(wrapper, table);
-   wrapper.appendChild(table);
   </script>
  </body>
 </html>

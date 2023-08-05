@@ -73,6 +73,11 @@ const relatedPosts = formattedPosts
      class="basis-3/5 p-2 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl mx-auto"
     >
      <slot />
+     <div class="md:max-w-2xl max-w-sm mx-auto py-4">
+      <hr
+       class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
+      />
+     </div>
      {
       relatedPosts.length > 0 && (
        <aside class="mb-4">
@@ -81,10 +86,7 @@ const relatedPosts = formattedPosts
        </aside>
       )
      }
-     <div
-      class="giscus p-2 rounded-xl bg-tertiary-container-light dark:bg-tertiary-container-dark"
-     >
-     </div>
+     <div class="giscus p-2 rounded-xl bg-tertiary-container-dark"></div>
     </article>
     <!-- <div
      class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm mx-auto mb-4 space-y-2 md:flex md:flex-col-reverse md:items-end md:justify-end justify-start p-2"

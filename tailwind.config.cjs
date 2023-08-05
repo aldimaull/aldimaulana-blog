@@ -6,8 +6,10 @@ module.exports = {
  theme: {
   extend: {
    fontFamily: {
-    sans: ["Roboto Flex"],
+    sans: ["Plus Jakarta Sans", "sans-serif"],
     serif: ["Lora"],
+    display: ["Plus Jakarta Display", "sans-serif"],
+    mono: ["JetBrains Mono", "monospace"],
    },
    animation: {
     gradient: "gradient 5s ease infinite",
