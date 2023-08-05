@@ -73,7 +73,7 @@ const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
      </div>
     </div>
     <div
-     class="h-80 md:h-[544px] w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-container-light dark:bg-surface-lowest-dark flex flex-col justify-center space-y-8 p-12"
+     class="h-full md:h-[544px] w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-container-light dark:bg-surface-lowest-dark flex flex-col justify-center space-y-8 p-12"
     >
      <h2
       class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-primary-light dark:text-primary-dark"
@@ -82,27 +82,43 @@ const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
      </h2>
      <div class="text-secondary-light dark:text-secondary-dark">
       <form
-       action=""
+       action="https://formsubmit.co/aldimaul07@gmail.com"
+       method="POST"
        class="form-control flex flex-col font-semibold space-y-2"
       >
+       <input type="hidden" name="_captcha" value="false" />
+       <input type="hidden" name="_template" value="table" />
+       <input
+        type="hidden"
+        name="_next"
+        value="https://aldimaulana.vercel.app/thanks/"
+       />
        <label for="nama">Nama Anda</label>
        <input
         id="nama"
-        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none"
+        name="Nama"
+        type="text"
+        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none border focus:border-0"
+        required
        />
        <label for="email">Email Anda</label>
        <input
         id="email"
-        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none"
+        type="email"
+        name="Email"
+        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none border focus:border-0"
+        required
        />
        <label for="pesan">Pesan Anda</label>
        <textarea
         id="pesan"
         placeholder="Masukkan pesan"
-        class="py-3 px-4 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none mb-4"
-        rows="3"></textarea>
+        name="Pesan"
+        class="py-3 px-4 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:text-on-surface-variant-dark text-on-surface-variant-light focus:ring-1 focus:outline-none border focus:border-0 mb-4"
+        rows="3"
+        required></textarea>
        <button
-        class="w-1/5 dark:bg-tertiary-container-dark bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-on-tertiary-container-dark py-2 rounded-full"
+        class="w-full md:w-1/5 dark:bg-tertiary-container-dark bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-on-tertiary-container-dark py-2 rounded-full"
         type="submit"
        >
         Kirim</button

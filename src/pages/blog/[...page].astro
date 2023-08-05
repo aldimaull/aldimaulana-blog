@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/MainLayout.astro";
 import Navbar from "../../components/Navbar.astro";
-import Header from "../../components/Header.astro";
+import FullHeader from "../../components/FullHeader.astro";
 import Footer from "../../components/Footer.astro";
 import Card from "../../components/Card.astro";
 import Pagination from "../../components/Pagination.astro";
@@ -25,7 +25,10 @@ const { page } = Astro.props;
    <Navbar />
   </div>
   <div class="w-full mx-auto">
-   <Header title="My Post" coverPhoto="/blog-cover.png" />
+   <FullHeader
+    title="My Post"
+    description="Step right into the electrifying universe, where words dance, ideas ignite, and curiosity takes the spotlight."
+   />
    <CategoryCloud showCount={true} />
    <div
     class="grid md:grid-cols-2 gap-2 items-center nowrap content-start md:max-w-4xl mx-auto mt-2 mb-4 p-2"
