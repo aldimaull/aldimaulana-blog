@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Toggle from "./Toggle";
+import { motion } from "framer-motion";
 
 const Menu = () => {
  const [nav, setNav] = useState(false);
@@ -26,12 +27,15 @@ const Menu = () => {
      </button>
     )}
    </div>
-   <div
+   <motion.div
     className={
      nav
-      ? "fixed left-0 top-0 h-full w-[60%] border-r border-primary-light dark:bg-background-dark bg-background-light dark:text-on-surface-dark text-on-surface-light duration-500 ease-in-out"
-      : "fixed left-[-100%] duration-500 ease-in-out"
+      ? "fixed left-0 top-0 h-full w-[60%] border-r border-primary-light dark:bg-background-dark bg-background-light dark:text-on-surface-dark text-on-surface-light duration-500 z-10"
+      : "fixed left-[-100%] top-0 duration-500 h-full"
     }
+    initial={{ x: "-100%" }}
+    animate={{ x: nav ? 0 : "-100%" }}
+    transition={{ type: "tween" }}
    >
     <div onClick={handleNav} className="p-4">
      {nav ? (
@@ -73,7 +77,7 @@ const Menu = () => {
       <Toggle />
      </span>
     </div>
-   </div>
+   </motion.div>
   </>
  );
 };
