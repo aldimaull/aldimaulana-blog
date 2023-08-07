@@ -1,6 +1,7 @@
 ---
 import Toggle from "./Toggle";
 import Menu from "./Menu";
+import ThemeMenu from "./ThemeMenu";
 ---
 
 <header
@@ -18,7 +19,7 @@ import Menu from "./Menu";
      >
       <span class="peer">Blog</span>
       <span
-       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-container-light hover:bg-surface-container-light dark:peer-hover:bg-surface-lowest-dark dark:hover:bg-surface-lowest-dark mb-1"
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
        >subject</span
       >
      </a>
@@ -32,7 +33,7 @@ import Menu from "./Menu";
      >
       <span class="peer">Contact</span>
       <span
-       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-container-light hover:bg-surface-container-light dark:peer-hover:bg-surface-lowest-dark dark:hover:bg-surface-lowest-dark mb-1"
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
        >email</span
       >
      </a>
@@ -46,7 +47,7 @@ import Menu from "./Menu";
      >
       <span class="peer">About</span>
       <span
-       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-container-light hover:bg-surface-container-light dark:peer-hover:bg-surface-lowest-dark dark:hover:bg-surface-lowest-dark mb-1"
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
        >person</span
       >
      </a>
@@ -54,6 +55,9 @@ import Menu from "./Menu";
    </div>
   </div>
   <div class="flex md:flex-col md:items-center py-4 items-center">
+   <span class="hidden md:inline end:0 mb-4">
+    <ThemeMenu client:load />
+   </span>
    <span class="hidden md:inline end:0">
     <Toggle client:load />
    </span>
@@ -141,7 +145,7 @@ import Menu from "./Menu";
  }
 
  a:hover .material-symbols-rounded {
-  @apply bg-surface-container-light dark:bg-surface-lowest-dark;
+  @apply bg-surface-light dark:bg-surface-dark;
  }
 
  .active {

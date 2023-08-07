@@ -12,7 +12,7 @@ const { title, description, image, frontmatter, robots } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden md:overflow-visible">
+<html lang="en" class="overflow-x-hidden md:overflow-visible theme-main">
  <Head {title} {description} {image} {frontmatter} {robots} />
  <body
   class="overflow-x-hidden md:overflow-visible dark:bg-background-dark bg-background-light duration-500"
@@ -35,6 +35,24 @@ const { title, description, image, frontmatter, robots } = Astro.props;
     document.documentElement.classList.add("dark");
    }
    window.localStorage.setItem("theme", theme);
+
+   const colorTheme = (() => {
+    if (
+     typeof localStorage !== "undefined" &&
+     localStorage.getItem("colorTheme")
+    ) {
+     return localStorage.getItem("colorTheme");
+    }
+    return "theme-main";
+   })();
+
+   if (colorTheme === "theme-main") {
+    document.documentElement.classList.replace("theme-ungu", "theme-main");
+   } else {
+    document.documentElement.classList.replace("theme-main", "theme-ungu");
+   }
+
+   window.localStorage.setItem("colorTheme", colorTheme);
   </script>
  </body>
 </html>

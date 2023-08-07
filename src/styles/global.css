@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 @layer base {
- :root {
+ .theme-main {
   --color-background-light: 244 252 239;
   --color-on-background-light: 23 29 22;
-  --color-surface-light: 244 252 239;
+  --color-surface-bg-light: 244 252 239;
   --color-surface-dim-light: 213 220 208;
   --color-surface-bright-light: 244 252 239;
   --color-surface-lowest-light: 255 255 255;
@@ -45,7 +45,7 @@
 
   --color-background-dark: 15 21 14;
   --color-on-background-dark: 221 229 217;
-  --color-surface-dark: 15 21 14;
+  --color-surface-bg-dark: 15 21 14;
   --color-surface-dim-dark: 15 21 14;
   --color-surface-bright-dark: 52 59 51;
   --color-surface-lowest-dark: 9 16 9;
@@ -76,6 +76,83 @@
   --color-on-tertiary-dark: 0 54 60;
   --color-tertiary-container-dark: 31 77 83;
   --color-on-tertiary-container-dark: 188 235 242;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
+ }
+ .theme-ungu {
+  --color-background-light: 255 247 249;
+  --color-on-background-light: 32 26 30;
+  --color-surface-bg-light: 255 247 249;
+  --color-surface-dim-light: 228 215 220;
+  --color-surface-bright-light: 255 247 249;
+  --color-surface-lowest-light: 255 255 255;
+  --color-surface-low-light: 254 240 246;
+  --color-surface-light: 248 234 240;
+  --color-surface-high-light: 242 229 235;
+  --color-surface-highest-light: 236 223 229;
+  --color-on-surface-light: 32 26 30;
+  --color-surface-variant-light: 241 221 232;
+  --color-on-surface-variant-light: 80 67 76;
+  --color-inverse-surface-light: 54 46 51;
+  --color-inverse-on-surface-light: 251 237 243;
+  --color-outline-light: 131 115 124;
+  --color-outline-variant-light: 212 193 204;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 142 66 128;
+  --color-primary-light: 102 31 91;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 144 67 129;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 255 172 234;
+  --color-secondary-light: 119 83 109;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 255 213 240;
+  --color-on-secondary-container-light: 94 60 85;
+  --color-tertiary-light: 112 31 34;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 158 65 65;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
+
+  --color-background-dark: 24 18 22;
+  --color-on-background-dark: 236 223 229;
+  --color-surface-bg-dark: 24 18 22;
+  --color-surface-dim-dark: 24 18 22;
+  --color-surface-bright-dark: 63 55 60;
+  --color-surface-lowest-dark: 18 12 16;
+  --color-surface-low-dark: 32 26 30;
+  --color-surface-dark: 36 30 34;
+  --color-surface-high-dark: 47 40 44;
+  --color-surface-highest-dark: 58 51 55;
+  --color-on-surface-dark: 236 223 229;
+  --color-surface-variant-dark: 80 67 76;
+  --color-on-surface-variant-dark: 212 193 204;
+  --color-inverse-surface-dark: 236 223 229;
+  --color-inverse-on-surface-dark: 54 46 51;
+  --color-outline-dark: 157 140 150;
+  --color-outline-variant-dark: 80 67 76;
+  --color-shadow-dark: 0 0 0;
+  --color-scrim-dark: 0 0 0;
+  --color-surface-tint-dark: 255 172 234;
+  --color-primary-dark: 255 172 234;
+  --color-on-primary-dark: 87 16 78;
+  --color-primary-container-dark: 116 43 104;
+  --color-on-primary-container-dark: 255 214 241;
+  --color-inverse-primary-dark: 142 66 128;
+  --color-secondary-dark: 230 185 216;
+  --color-on-secondary-dark: 69 38 62;
+  --color-secondary-container-dark: 86 53 78;
+  --color-on-secondary-container-dark: 245 200 230;
+  --color-tertiary-dark: 255 179 176;
+  --color-on-tertiary-dark: 96 19 23;
+  --color-tertiary-container-dark: 127 42 44;
+  --color-on-tertiary-container-dark: 255 216 214;
   --color-error-dark: 255 180 171;
   --color-on-error-dark: 105 0 5;
   --color-error-container-dark: 147 0 10;
