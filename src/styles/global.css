@@ -5,77 +5,81 @@
 
 @layer base {
  :root {
-  --color-primary-light: 0 106 104;
-  --color-on-primary-light: 255 255 255;
-  --color-primary-container-light: 111 247 243;
-  --color-on-primary-container-light: 0 32 31;
-  --color-secondary-light: 74 99 98;
-  --color-on-secondary-light: 255 255 255;
-  --color-secondary-container-light: 204 232 230;
-  --color-on-secondary-container-light: 5 31 31;
-  --color-tertiary-light: 74 96 123;
-  --color-on-tertiary-light: 255 255 255;
-  --color-tertiary-container-light: 210 228 255;
-  --color-on-tertiary-container-light: 2 29 53;
-  --color-error-light: 186 26 26;
-  --color-error-container-light: 255 218 214;
-  --color-on-error-light: 255 255 255;
-  --color-on-error-container-light: 65 0 2;
-  --color-background-light: 250 253 252;
-  --color-on-background-light: 25 28 28;
-  --color-surface-light: 250 253 252;
-  --color-on-surface-light: 25 28 28;
-  --color-surface-variant-light: 218 229 227;
-  --color-on-surface-variant-light: 63 73 72;
-  --color-outline-light: 111 121 120;
-  --color-inverse-on-surface-light: 239 241 240;
-  --color-inverse-surface-light: 45 49 49;
-  --color-inverse-primary-light: 77 218 214;
-  --color-shadow-light: 0 0 0;
-  --color-surface-tint-light: 0 106 104;
-  --color-outline-variant-light: 190 201 199;
-  --color-scrim-light: 0 0 0;
+  --color-background-light: 244 252 239;
+  --color-on-background-light: 23 29 22;
+  --color-surface-light: 244 252 239;
+  --color-surface-dim-light: 213 220 208;
+  --color-surface-bright-light: 244 252 239;
   --color-surface-lowest-light: 255 255 255;
-  --color-surface-low-light: 242 244 243;
-  --color-surface-container-light: 236 238 237;
-  --color-surface-high-light: 230 233 232;
-  --color-surface-highest-light: 224 227 226;
+  --color-surface-low-light: 239 246 233;
+  --color-surface-light: 233 240 228;
+  --color-surface-high-light: 227 234 222;
+  --color-surface-highest-light: 221 229 217;
+  --color-on-surface-light: 23 29 22;
+  --color-surface-variant-light: 217 230 212;
+  --color-on-surface-variant-light: 62 74 60;
+  --color-inverse-surface-light: 43 50 42;
+  --color-inverse-on-surface-light: 236 243 231;
+  --color-outline-light: 110 123 107;
+  --color-outline-variant-light: 189 202 185;
+  --color-shadow-light: 0 0 0;
+  --color-scrim-light: 0 0 0;
+  --color-surface-tint-light: 0 110 37;
+  --color-primary-light: 0 93 30;
+  --color-on-primary-light: 255 255 255;
+  --color-primary-container-light: 0 135 48;
+  --color-on-primary-container-light: 255 255 255;
+  --color-inverse-primary-light: 103 223 117;
+  --color-secondary-light: 59 104 62;
+  --color-on-secondary-light: 255 255 255;
+  --color-secondary-container-light: 193 244 189;
+  --color-on-secondary-container-light: 39 84 43;
+  --color-tertiary-light: 0 75 169;
+  --color-on-tertiary-light: 255 255 255;
+  --color-tertiary-container-light: 27 111 233;
+  --color-on-tertiary-container-light: 255 255 255;
+  --color-error-light: 186 26 26;
+  --color-on-error-light: 255 255 255;
+  --color-error-container-light: 255 218 214;
+  --color-on-error-container-light: 65 0 2;
 
-  --color-primary-dark: 77 218 214;
-  --color-on-primary-dark: 0 55 54;
-  --color-primary-container-dark: 0 80 78;
-  --color-on-primary-container-dark: 111 247 243;
-  --color-secondary-dark: 176 204 202;
-  --color-on-secondary-dark: 27 53 52;
-  --color-secondary-container-dark: 50 75 74;
-  --color-on-secondary-container-dark: 204 232 230;
-  --color-tertiary-dark: 178 200 232;
-  --color-on-tertiary-dark: 27 50 75;
-  --color-tertiary-container-dark: 50 72 99;
-  --color-on-tertiary-container-dark: 210 228 255;
-  --color-error-dark: 255 180 171;
-  --color-error-container-dark: 147 0 10;
-  --color-on-error-dark: 105 0 5;
-  --color-on-error-container-dark: 255 218 214;
-  --color-background-dark: 25 28 28;
-  --color-on-background-dark: 224 227 226;
-  --color-surface-dark: 25 28 28;
-  --color-on-surface-dark: 224 227 226;
-  --color-surface-variant-dark: 63 73 72;
-  --color-on-surface-variant-dark: 190 201 199;
-  --color-outline-dark: 136 147 146;
-  --color-inverse-on-surface-dark: 25 28 28;
-  --color-inverse-surface-dark: 224 227 226;
-  --color-inverse-primary-dark: 0 106 104;
+  --color-background-dark: 15 21 14;
+  --color-on-background-dark: 221 229 217;
+  --color-surface-dark: 15 21 14;
+  --color-surface-dim-dark: 15 21 14;
+  --color-surface-bright-dark: 52 59 51;
+  --color-surface-lowest-dark: 9 16 9;
+  --color-surface-low-dark: 23 29 22;
+  --color-surface-dark: 27 33 26;
+  --color-surface-high-dark: 37 44 36;
+  --color-surface-highest-dark: 48 55 46;
+  --color-on-surface-dark: 221 229 217;
+  --color-surface-variant-dark: 62 74 60;
+  --color-on-surface-variant-dark: 189 202 185;
+  --color-inverse-surface-dark: 221 229 217;
+  --color-inverse-on-surface-dark: 43 50 42;
+  --color-outline-dark: 135 148 132;
+  --color-outline-variant-dark: 62 74 60;
   --color-shadow-dark: 0 0 0;
-  --color-surface-tint-dark: 77 218 214;
-  --color-outline-variant-dark: 63 73 72;
   --color-scrim-dark: 0 0 0;
-  --color-surface-lowest-dark: 50 53 53;
-  --color-surface-low-dark: 39 43 42;
-  --color-surface-container-dark: 29 32 32;
-  --color-surface-high-dark: 25 28 28;
-  --color-surface-highest-dark: 11 15 15;
+  --color-surface-tint-dark: 103 223 117;
+  --color-primary-dark: 103 223 117;
+  --color-on-primary-dark: 0 57 15;
+  --color-primary-container-dark: 0 135 48;
+  --color-on-primary-container-dark: 255 255 255;
+  --color-inverse-primary-dark: 0 110 37;
+  --color-secondary-dark: 161 211 159;
+  --color-on-secondary-dark: 10 57 19;
+  --color-secondary-container-dark: 28 72 33;
+  --color-on-secondary-container-dark: 174 225 172;
+  --color-tertiary-dark: 174 198 255;
+  --color-on-tertiary-dark: 0 46 107;
+  --color-tertiary-container-dark: 27 111 233;
+  --color-on-tertiary-container-dark: 255 255 255;
+  --color-error-dark: 255 180 171;
+  --color-on-error-dark: 105 0 5;
+  --color-error-container-dark: 147 0 10;
+  --color-on-error-container-dark: 255 218 214;
  }
 }
 
@@ -104,23 +108,23 @@ h1 {
 }
 
 article h1 {
- @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl dark:text-secondary-dark text-secondary-light;
+ @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl dark:text-primary-dark text-primary-light;
 }
 
 article h2 {
- @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-secondary-dark text-secondary-light;
+ @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl dark:text-primary-dark text-primary-light;
 }
 article h3 {
- @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl dark:text-secondary-dark text-secondary-light;
+ @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl dark:text-primary-dark text-primary-light;
 }
 article h4 {
- @apply text-2xl dark:text-secondary-dark text-secondary-light;
+ @apply text-2xl dark:text-primary-dark text-primary-light;
 }
 article h5 {
- @apply text-xl dark:text-secondary-dark text-secondary-light;
+ @apply text-xl dark:text-primary-dark text-primary-light;
 }
 article h6 {
- @apply text-lg dark:text-secondary-dark text-secondary-light;
+ @apply text-lg dark:text-primary-dark text-primary-light;
 }
 
 article a {
@@ -178,7 +182,7 @@ article code {
 }
 
 article pre {
- @apply p-4 rounded-3xl bg-primary-container-dark text-on-primary-container-dark overflow-auto font-mono !important;
+ @apply p-4 rounded-3xl bg-surface-variant-dark text-on-primary-container-dark overflow-auto font-mono !important;
 }
 
 article pre::-webkit-scrollbar {

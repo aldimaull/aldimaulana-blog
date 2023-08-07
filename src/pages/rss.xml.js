@@ -7,8 +7,8 @@ export function get(context) {
  const posts = formatBlogPosts(Object.values(postImportResult));
  return rss({
   stylesheet: "/rss/styles.xsl",
-  title: "Aldi Maulana | Blog",
-  description: "A humble Astronaut’s guide to the stars",
+  title: "Aldi Maulana's Lair",
+  description: "Exploring ideas on my vibrant blog!",
   site: context.site,
   items: posts.map((post) => ({
    link: post.url,
