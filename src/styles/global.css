@@ -34,10 +34,10 @@
   --color-on-secondary-light: 255 255 255;
   --color-secondary-container-light: 193 244 189;
   --color-on-secondary-container-light: 39 84 43;
-  --color-tertiary-light: 0 75 169;
+  --color-tertiary-light: 57 101 107;
   --color-on-tertiary-light: 255 255 255;
-  --color-tertiary-container-light: 27 111 233;
-  --color-on-tertiary-container-light: 255 255 255;
+  --color-tertiary-container-light: 188 235 242;
+  --color-on-tertiary-container-light: 0 31 35;
   --color-error-light: 186 26 26;
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
@@ -72,10 +72,10 @@
   --color-on-secondary-dark: 10 57 19;
   --color-secondary-container-dark: 28 72 33;
   --color-on-secondary-container-dark: 174 225 172;
-  --color-tertiary-dark: 174 198 255;
-  --color-on-tertiary-dark: 0 46 107;
-  --color-tertiary-container-dark: 27 111 233;
-  --color-on-tertiary-container-dark: 255 255 255;
+  --color-tertiary-dark: 161 206 213;
+  --color-on-tertiary-dark: 0 54 60;
+  --color-tertiary-container-dark: 31 77 83;
+  --color-on-tertiary-container-dark: 188 235 242;
   --color-error-dark: 255 180 171;
   --color-on-error-dark: 105 0 5;
   --color-error-container-dark: 147 0 10;
