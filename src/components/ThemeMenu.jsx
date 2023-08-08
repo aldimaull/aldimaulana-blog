@@ -16,37 +16,57 @@ export default function MyListbox() {
  );
 
  useEffect(() => {
-  switch (selectedColor.ct) {
-   case "theme-ungu":
-    document.documentElement.classList.replace("theme-main", "theme-ungu");
-    document.documentElement.classList.replace("theme-kuning", "theme-ungu");
-    document.documentElement.classList.replace("theme-merah", "theme-ungu");
-    document.documentElement.classList.replace("theme-biru", "theme-ungu");
-    break;
-   case "theme-kuning":
-    document.documentElement.classList.replace("theme-main", "theme-kuning");
-    document.documentElement.classList.replace("theme-ungu", "theme-kuning");
-    document.documentElement.classList.replace("theme-merah", "theme-kuning");
-    document.documentElement.classList.replace("theme-biru", "theme-kuning");
-    break;
-   case "theme-merah":
-    document.documentElement.classList.replace("theme-main", "theme-merah");
-    document.documentElement.classList.replace("theme-ungu", "theme-merah");
-    document.documentElement.classList.replace("theme-kuning", "theme-merah");
-    document.documentElement.classList.replace("theme-biru", "theme-merah");
-    break;
-   case "theme-biru":
-    document.documentElement.classList.replace("theme-main", "theme-biru");
-    document.documentElement.classList.replace("theme-ungu", "theme-biru");
-    document.documentElement.classList.replace("theme-kuning", "theme-biru");
-    document.documentElement.classList.replace("theme-merah", "theme-biru");
-    break;
-   default:
-    document.documentElement.classList.replace("theme-kuning", "theme-main");
-    document.documentElement.classList.replace("theme-ungu", "theme-main");
-    document.documentElement.classList.replace("theme-merah", "theme-main");
-    document.documentElement.classList.replace("theme-biru", "theme-main");
-  }
+  const themeClasses = {
+   "theme-ungu": ["theme-main", "theme-kuning", "theme-merah", "theme-biru"],
+   "theme-kuning": ["theme-main", "theme-ungu", "theme-merah", "theme-biru"],
+   "theme-merah": ["theme-main", "theme-ungu", "theme-kuning", "theme-biru"],
+   "theme-biru": ["theme-main", "theme-ungu", "theme-kuning", "theme-merah"],
+  };
+
+  const classesToRemove = themeClasses[selectedColor.ct] || [
+   "theme-kuning",
+   "theme-ungu",
+   "theme-merah",
+   "theme-biru",
+  ];
+  const classToAdd =
+   selectedColor.ct === undefined ? "theme-main" : selectedColor.ct;
+
+  classesToRemove.forEach((className) => {
+   document.documentElement.classList.replace(className, classToAdd);
+  });
+
+  // switch (selectedColor.ct) {
+  //  case "theme-ungu":
+  //   document.documentElement.classList.replace("theme-main", "theme-ungu");
+  //   document.documentElement.classList.replace("theme-kuning", "theme-ungu");
+  //   document.documentElement.classList.replace("theme-merah", "theme-ungu");
+  //   document.documentElement.classList.replace("theme-biru", "theme-ungu");
+  //   break;
+  //  case "theme-kuning":
+  //   document.documentElement.classList.replace("theme-main", "theme-kuning");
+  //   document.documentElement.classList.replace("theme-ungu", "theme-kuning");
+  //   document.documentElement.classList.replace("theme-merah", "theme-kuning");
+  //   document.documentElement.classList.replace("theme-biru", "theme-kuning");
+  //   break;
+  //  case "theme-merah":
+  //   document.documentElement.classList.replace("theme-main", "theme-merah");
+  //   document.documentElement.classList.replace("theme-ungu", "theme-merah");
+  //   document.documentElement.classList.replace("theme-kuning", "theme-merah");
+  //   document.documentElement.classList.replace("theme-biru", "theme-merah");
+  //   break;
+  //  case "theme-biru":
+  //   document.documentElement.classList.replace("theme-main", "theme-biru");
+  //   document.documentElement.classList.replace("theme-ungu", "theme-biru");
+  //   document.documentElement.classList.replace("theme-kuning", "theme-biru");
+  //   document.documentElement.classList.replace("theme-merah", "theme-biru");
+  //   break;
+  //  default:
+  //   document.documentElement.classList.replace("theme-kuning", "theme-main");
+  //   document.documentElement.classList.replace("theme-ungu", "theme-main");
+  //   document.documentElement.classList.replace("theme-merah", "theme-main");
+  //   document.documentElement.classList.replace("theme-biru", "theme-main");
+  // }
   localStorage.setItem("colorTheme", selectedColor.ct);
  }, [selectedColor.ct]);
 
