@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { Listbox } from "@headlessui/react";
 
 const color = [
- { id: 1, name: "Main", ct: "theme-main" },
- { id: 2, name: "Ungu", ct: "theme-ungu" },
+ { id: 1, name: "Verdant Vibes", ct: "theme-main" },
+ { id: 2, name: "Lavender Lush", ct: "theme-ungu" },
+ { id: 3, name: "Earthtone Espresso", ct: "theme-kuning" },
+ { id: 4, name: "Crimson Charm", ct: "theme-merah" },
+ { id: 5, name: "Cerulean Serenity", ct: "theme-biru" },
 ];
 
 export default function MyListbox() {
@@ -13,10 +16,36 @@ export default function MyListbox() {
  );
 
  useEffect(() => {
-  if (selectedColor.ct === "theme-ungu") {
-   document.documentElement.classList.replace("theme-main", "theme-ungu");
-  } else {
-   document.documentElement.classList.replace("theme-ungu", "theme-main");
+  switch (selectedColor.ct) {
+   case "theme-ungu":
+    document.documentElement.classList.replace("theme-main", "theme-ungu");
+    document.documentElement.classList.replace("theme-kuning", "theme-ungu");
+    document.documentElement.classList.replace("theme-merah", "theme-ungu");
+    document.documentElement.classList.replace("theme-biru", "theme-ungu");
+    break;
+   case "theme-kuning":
+    document.documentElement.classList.replace("theme-main", "theme-kuning");
+    document.documentElement.classList.replace("theme-ungu", "theme-kuning");
+    document.documentElement.classList.replace("theme-merah", "theme-kuning");
+    document.documentElement.classList.replace("theme-biru", "theme-kuning");
+    break;
+   case "theme-merah":
+    document.documentElement.classList.replace("theme-main", "theme-merah");
+    document.documentElement.classList.replace("theme-ungu", "theme-merah");
+    document.documentElement.classList.replace("theme-kuning", "theme-merah");
+    document.documentElement.classList.replace("theme-biru", "theme-merah");
+    break;
+   case "theme-biru":
+    document.documentElement.classList.replace("theme-main", "theme-biru");
+    document.documentElement.classList.replace("theme-ungu", "theme-biru");
+    document.documentElement.classList.replace("theme-kuning", "theme-biru");
+    document.documentElement.classList.replace("theme-merah", "theme-biru");
+    break;
+   default:
+    document.documentElement.classList.replace("theme-kuning", "theme-main");
+    document.documentElement.classList.replace("theme-ungu", "theme-main");
+    document.documentElement.classList.replace("theme-merah", "theme-main");
+    document.documentElement.classList.replace("theme-biru", "theme-main");
   }
   localStorage.setItem("colorTheme", selectedColor.ct);
  }, [selectedColor.ct]);
@@ -26,21 +55,21 @@ export default function MyListbox() {
    as="div"
    value={selectedColor}
    onChange={setSelectedColor}
-   className="flex flex-col-reverse md:flex-col"
+   className="flex flex-col-reverse md:flex-col capitalize"
   >
-   <Listbox.Options className="p-2 text-center mb-2 rounded-lg border border-outline-light text-outline-light hover:bg-surface-high-light bg-secondary-container-light dark:bg-secondary-container-dark mt-2 md:mt-0">
+   <Listbox.Options className="p-1 text-center mb-2 rounded-lg border border-outline-light bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark mt-2 md:mt-0 md:text-xs">
     {color.map((person) => (
      <Listbox.Option
       key={person.id}
       value={person}
-      className="rounded-full py-2 cursor-pointer hover:bg-secondary-light dark:hover:bg-secondary-dark"
+      className="rounded-full py-2 cursor-pointer hover:bg-on-secondary-light dark:hover:bg-on-secondary-dark md:text-xs"
      >
       {person.name}
      </Listbox.Option>
     ))}
    </Listbox.Options>
    <Listbox.Button
-    className=" p-4 rounded-full border border-outline-light text-outline-light hover:bg-surface-high-light"
+    className=" p-2 rounded-full border border-outline-light text-outline-light hover:bg-surface-high-light md:text-xs mx-2"
     horizontal
    >
     {selectedColor.name}

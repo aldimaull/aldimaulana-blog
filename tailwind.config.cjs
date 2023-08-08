@@ -169,6 +169,10 @@ module.exports = {
      dark: "rgb(var(--color-shadow-dark) / <alpha-value>)",
     },
    },
+   backgroundImage: {
+    "full-header-light": `var(--background-image-light)`,
+    "full-header-dark": `var(--background-image-dark)`,
+   },
   },
  },
  plugins: [],

@@ -9,19 +9,11 @@ const Toggle = () => {
  useEffect(() => {
   if (theme === "dark") {
    document.documentElement.classList.add("dark");
-   if (document.getElementById("full-header")) {
-    document.getElementById("full-header").style.backgroundImage =
-     "url('/full-header.png')";
-   }
   } else {
    document.documentElement.classList.remove("dark");
-   if (document.getElementById("full-header")) {
-    document.getElementById("full-header").style.backgroundImage =
-     "url('/full-header-light.png')";
-   }
   }
   localStorage.setItem("theme", theme);
- }, [theme]);
+ }, [theme, localStorage.getItem("colorTheme")]);
 
  return (
   <>
