@@ -573,6 +573,13 @@ article blockquote::after {
  margin-top: -0.2em;
 }
 
+article aside p {
+ @apply font-sans text-xl dark:text-primary-dark text-primary-light mb-0;
+}
+article aside div p {
+ @apply font-sans text-lg dark:text-primary-dark text-primary-light mt-0 mb-0;
+}
+
 /* TOC */
 
 #toc li {

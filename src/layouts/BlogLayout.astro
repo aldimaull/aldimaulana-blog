@@ -78,16 +78,16 @@ const relatedPosts = formattedPosts
       />
      </div>
      <div class="giscus p-2 rounded-xl bg-surface-variant-dark"></div>
+     {
+      relatedPosts.length > 0 && (
+       <aside class="mb-4">
+        <p>Related Posts</p>
+        <RelatedPosts {relatedPosts} />
+       </aside>
+      )
+     }
     </article>
    </div>
-   {
-    relatedPosts.length > 0 && (
-     <aside class="mb-4">
-      <h5>Related Posts</h5>
-      <RelatedPosts {relatedPosts} />
-     </aside>
-    )
-   }
    <Footer />
   </div>
  </div>

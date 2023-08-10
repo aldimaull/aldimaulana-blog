@@ -4,7 +4,7 @@
 <aside id="toc"></aside>
 
 <script>
- const headings = document.querySelectorAll("article :is(h2,h3,h4,h5,h6)");
+ const headings = document.querySelectorAll("article :is(h2,h3,h4,h5,h6) ");
  const tocContainer = document.getElementById("toc");
  const createTOC = () => {
   let tocHTML =
@@ -49,7 +49,7 @@
    const id = el.id;
    const text = el.textContent;
 
-   const tocEntry = `<li class="toc-level-${level}"><a href="#${id}">${text}</a></li>`;
+   const tocEntry = `<li class="toc-level-${level}"><a href="#${id}"><svg width="3" height="24" viewBox="0 -9 3 24" class="inline mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>${text}</a></li>`;
    tocHTML += tocEntry;
    observer.observe(el);
   });
@@ -57,6 +57,19 @@
   tocContainer.innerHTML = tocHTML;
  };
  createTOC();
+</script>
+
+<script>
+ const element = document.getElementById("toc");
+ const stopHeight = 300;
+
+ window.addEventListener("scroll", function () {
+  if (window.scrollY >= stopHeight) {
+   element.classList.remove("md:sticky");
+  } else {
+   element.classList.add("md:sticky");
+  }
+ });
 </script>
 
 <style>
