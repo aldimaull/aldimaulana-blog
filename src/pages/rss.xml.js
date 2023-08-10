@@ -12,15 +12,23 @@ export function get(context) {
   title: "Aldi Maulana's Lair",
   description: "Exploring ideas on my vibrant blog!",
   site: context.site,
-  items: posts.map((post) => ({
-   link: post.url,
-   title: post.frontmatter.title,
-   content: sanitizeHtml(post.compiledContent()),
-   pubDate: post.frontmatter.date,
-   description: post.frontmatter.description,
-   customData: `
-     <author>${post.frontmatter.author}</author>
-    `,
-  })),
+  items: posts.map((post) => {
+   let content;
+   if (post.url.endsWith(".mdx")) {
+    content = sanitizeHtml(post.compiledContent());
+   } else if (post.url.endsWith(".md")) {
+    content = sanitizeHtml(post.export());
+   } else {
+    content = "";
+   }
+   return {
+    link: post.url,
+    title: post.frontmatter.title,
+    content,
+    pubDate: post.frontmatter.date,
+    description: post.frontmatter.description,
+    customData: `<author>${post.frontmatter.author}</author>`,
+   };
+  }),
  });
 }
