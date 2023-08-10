@@ -54,20 +54,19 @@ const relatedPosts = formattedPosts
      {slugify(category)}
     />
    </div>
-   <!-- <div class="flex md:flex-row py-4 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto md:px-2"> -->
    <div class="md:flex md:flex-row-reverse md:mx-2">
     <div
      class="p-2 basis-2/5 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-3xl 2xl:max-w-4xl md:ps-6 mx-auto"
     >
-     <div class="md:text-right">
+     <div>
       <Badge
        link={`/category/${slugify(category)}`}
        text={category}
        className="capitalize"
-       btnClass="text-xs md:mb-4"
+       btnClass="text-xs"
       />
      </div>
-     <TOC pageHeadings={headings} />
+     <TOC />
     </div>
     <article
      class="basis-3/5 p-2 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl mx-auto"
@@ -78,17 +77,17 @@ const relatedPosts = formattedPosts
        class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
       />
      </div>
-     {
-      relatedPosts.length > 0 && (
-       <aside class="mb-4">
-        <h5>Related Posts</h5>
-        <RelatedPosts {relatedPosts} />
-       </aside>
-      )
-     }
      <div class="giscus p-2 rounded-xl bg-surface-variant-dark"></div>
     </article>
    </div>
+   {
+    relatedPosts.length > 0 && (
+     <aside class="mb-4">
+      <h5>Related Posts</h5>
+      <RelatedPosts {relatedPosts} />
+     </aside>
+    )
+   }
    <Footer />
   </div>
  </div>

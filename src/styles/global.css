@@ -5,6 +5,7 @@
 
 @layer base {
  .theme-main {
+  --background-image-light: url("/full-header-light.png");
   --color-background-light: 244 252 239;
   --color-on-background-light: 23 29 22;
   --color-surface-bg-light: 244 252 239;
@@ -42,7 +43,6 @@
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
   --color-on-error-container-light: 65 0 2;
-  --background-image-light: url("/full-header-light.png");
 
   --background-image-dark: url("/full-header.png");
   --color-background-dark: 15 21 14;
@@ -84,6 +84,7 @@
   --color-on-error-container-dark: 255 218 214;
  }
  .theme-ungu {
+  --background-image-light: url("/full-header-light-ungu.png");
   --color-background-light: 255 247 249;
   --color-on-background-light: 32 26 30;
   --color-surface-bg-light: 255 247 249;
@@ -121,7 +122,6 @@
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
   --color-on-error-container-light: 65 0 2;
-  --background-image-light: url("/full-header-light-ungu.png");
 
   --background-image-dark: url("/full-header-ungu.png");
   --color-background-dark: 24 18 22;
@@ -163,6 +163,7 @@
   --color-on-error-container-dark: 255 218 214;
  }
  .theme-kuning {
+  --background-image-light: url("/full-header-light-kuning.png");
   --color-background-light: 255 248 242;
   --color-on-background-light: 31 27 19;
   --color-surface-bg-light: 255 248 242;
@@ -200,7 +201,6 @@
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
   --color-on-error-container-light: 65 0 2;
-  --background-image-light: url("/full-header-light-kuning.png");
 
   --background-image-dark: url("/full-header-kuning.png");
   --color-background-dark: 22 19 12;
@@ -242,6 +242,7 @@
   --color-on-error-container-dark: 255 218 214;
  }
  .theme-merah {
+  --background-image-light: url("/full-header-light-merah.png");
   --color-background-light: 255 248 247;
   --color-on-background-light: 41 23 22;
   --color-surface-bg-light: 255 248 247;
@@ -279,7 +280,6 @@
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
   --color-on-error-container-light: 65 0 2;
-  --background-image-light: url("/full-header-light-merah.png");
 
   --background-image-dark: url("/full-header-merah.png");
   --color-background-dark: 32 14 14;
@@ -321,6 +321,7 @@
   --color-on-error-container-dark: 255 218 214;
  }
  .theme-biru {
+  --background-image-light: url("/full-header-light-biru.png");
   --color-background-light: 248 249 255;
   --color-on-background-light: 24 28 34;
   --color-surface-bg-light: 248 249 255;
@@ -358,7 +359,6 @@
   --color-on-error-light: 255 255 255;
   --color-error-container-light: 255 218 214;
   --color-on-error-container-light: 65 0 2;
-  --background-image-light: url("/full-header-light-biru.png");
 
   --background-image-dark: url("/full-header-biru.png");
   --color-background-dark: 16 20 25;
@@ -571,4 +571,29 @@ article blockquote::after {
  text-indent: -2px;
  width: 1em;
  margin-top: -0.2em;
+}
+
+/* TOC */
+
+#toc li {
+ @apply my-1;
+}
+#toc ul {
+ list-style: none;
+}
+#toc a {
+ @apply text-on-surface-light dark:text-on-surface-dark;
+ text-decoration: none;
+}
+#toc li.toc-level-3 {
+ margin-left: 2rem;
+}
+#toc li.toc-level-4 {
+ margin-left: 4rem;
+}
+#toc li.toc-level-5 {
+ margin-left: 6rem;
+}
+#toc li.toc-level-6 {
+ margin-left: 8rem;
 }

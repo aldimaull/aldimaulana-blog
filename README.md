@@ -1,38 +1,8 @@
-# Blog Personal Aldi Maulana 🥳
+# Personal Blog Aldi Maulana 🥳
 
 > 😆 **Akhirnya** website blog ini telah selesai (_walaupun belum 100% :D_)
 
-## 📖 Isi Website
-
-Di dalam projek ini, kalian akan melihat struktur folder dan file seperti berikut:
-
-... belum ada ya :D _soon_
-
-[//]: # (```)
-
-[//]: # (/)
-
-[//]: # (├── public/)
-
-[//]: # (│   └── favicon.svg)
-
-[//]: # (├── src/)
-
-[//]: # (│   ├── components/)
-
-[//]: # (│   │   └── Card.astro)
-
-[//]: # (│   ├── layouts/)
-
-[//]: # (│   │   └── Layout.astro)
-
-[//]: # (│   └── pages/)
-
-[//]: # (│       └── index.astro)
-
-[//]: # (└── package.json)
-
-[//]: # (```)
+Website ini meniru sedikit layout dari website [Material Design 3](https://m3.material.io/). Selain itu, skema warna palet yang digunakan mengacu pada [Material Design 3 Theme Builder](https://m3.material.io/theme-builder/).
 
 Website ini dibuat untuk portfolio dan blog pribadi saya. 
 
@@ -43,7 +13,7 @@ Website ini dibuat untuk portfolio dan blog pribadi saya.
 - Javascript
 - HTML 5
 - CSS 3
-- Markdown (.md)
+- Markdown (.md & .mdx)
 
 ## 👀 Keep in touch
 

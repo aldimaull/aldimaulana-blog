@@ -77,7 +77,7 @@ export default function MyListbox() {
    onChange={setSelectedColor}
    className="flex flex-col-reverse md:flex-col capitalize"
   >
-   <Listbox.Options className="p-1 text-center mb-2 rounded-lg border border-outline-light bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark mt-2 md:mt-0 md:text-xs">
+   <Listbox.Options className="p-1 text-center mb-2 rounded-lg border border-outline-light dark:border-outline-dark bg-secondary-container-light dark:bg-secondary-container-dark text-on-secondary-container-light dark:text-on-secondary-container-dark mt-2 md:mt-0 md:text-xs">
     {color.map((person) => (
      <Listbox.Option
       key={person.id}
@@ -89,7 +89,7 @@ export default function MyListbox() {
     ))}
    </Listbox.Options>
    <Listbox.Button
-    className=" p-2 rounded-full border border-outline-light text-outline-light hover:bg-surface-high-light md:text-xs mx-2"
+    className=" p-2 rounded-full border border-outline-light dark:border-outline-dark text-outline-light hover:bg-surface-high-light md:text-xs mx-2"
     horizontal
    >
     {selectedColor.name}

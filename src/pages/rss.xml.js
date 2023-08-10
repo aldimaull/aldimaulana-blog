@@ -3,7 +3,9 @@ import sanitizeHtml from "sanitize-html";
 import { formatBlogPosts } from "../js/utils.js";
 
 export function get(context) {
- const postImportResult = import.meta.glob("./blog/**/*.md", { eager: true });
+ const postImportResult = import.meta.glob("./blog/**/*.{md,mdx}", {
+  eager: true,
+ });
  const posts = formatBlogPosts(Object.values(postImportResult));
  return rss({
   stylesheet: "/rss/styles.xsl",

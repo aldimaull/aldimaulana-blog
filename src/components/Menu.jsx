@@ -62,7 +62,7 @@ const Menu = () => {
      <a href="/contact" className=" p-4 ">
       <span>Contact</span>
      </a>
-     <a href="/about/aldi-maulana" className=" p-4">
+     <a href="/about" className=" p-4">
       <span>About</span>
      </a>
      <span className="end:0 dark:inline m-4">

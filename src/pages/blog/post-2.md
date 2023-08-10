@@ -24,7 +24,6 @@ It showed a lady fitted out with a fur hat and fur boa who sat upright, raising 
   </p>
 </div>
 
-### Things we know about Gregor's sleeping habits.
 
 - He always slept on his right side.
 - He has to get up early (to start another dreadful day).
@@ -64,6 +63,8 @@ It showed a lady fitted out with a fur hat and fur boa who sat upright, raising 
   </tr>
   </table>
 
+### Things we know about Gregor's sleeping habits.
+
 First he wanted to stand up quietly and undisturbed, get dressed, above all have breakfast, and only then consider further action, for (he noticed this clearly) by thinking things over in bed he would not reach a reasonable conclusion. He remembered that he had already often felt a light pain or other in bed, perhaps the result of an awkward lying position, which later turned out to be purely imaginary when he stood up, and he was eager to see how his present fantasies would gradually dissipate. That the change in his voice was nothing other than the onset of a real chill, an occupational illness of commercial travelers, of that he had not the slightest doubt.
 
 ```js
@@ -98,11 +99,13 @@ Thus, he tried to get his upper body out of the bed first and turned his head ca
 
 Baik, berikut adalah postingan blog dalam markdown sepanjang 1000 kata yang menceritakan Anda yang sudah berhasil membuat blog sendiri:
 
-# Saya Sudah Membuat Blog Sendiri!
+##### Saya Sudah Membuat Blog Sendiri!
 
 Saya sangat senang bisa mengumumkan bahwa saya sudah berhasil membuat blog sendiri! Ini adalah sesuatu yang sudah saya rencanakan sejak lama, dan akhirnya saya bisa mewujudkannya.
 
 Saya sudah lama ingin membuat blog karena saya suka menulis. Saya juga ingin memiliki platform untuk membagikan ide dan pemikiran saya dengan orang lain. Saya percaya bahwa blog adalah cara yang bagus untuk mengekspresikan diri dan berbagi pengetahuan dengan orang lain.
+
+##### Ini judul
 
 Saya sudah melakukan banyak penelitian tentang cara membuat blog. Saya juga sudah mencoba beberapa platform berbeda sebelum akhirnya memutuskan untuk menggunakan WordPress. WordPress adalah platform blog yang populer dan mudah digunakan. Saya juga menemukan banyak sumber daya online yang membantu saya mempelajari cara menggunakan WordPress.
 
@@ -121,7 +124,43 @@ Saya sangat senang dengan hasil blog saya. Saya sudah berhasil membuat blog yang
 
 Saya berharap blog saya akan terus berkembang dan menjadi sumber informasi yang bermanfaat bagi orang lain. Saya juga berharap bisa berbagi ide dan pemikiran saya dengan lebih banyak orang melalui blog saya.
 
-## Tips untuk Membuat Blog Sendiri
+###### Tips untuk Membuat Blog Sendiri
+
+Jika Anda tertarik untuk membuat blog sendiri, berikut adalah beberapa tips yang bisa Anda ikuti:
+
+- Pilih topik yang Anda sukai. Ini akan membuat Anda lebih bersemangat untuk menulis dan mengelola blog Anda.
+- Buat judul yang menarik dan deskripsi yang jelas. Ini akan membuat orang lebih tertarik untuk membaca artikel Anda.
+- Gunakan gambar dan video yang menarik. Ini akan membuat artikel Anda lebih menarik dan informatif.
+- Promosikan blog Anda di media sosial dan platform lainnya. Ini akan membantu Anda menarik lebih banyak pengunjung ke blog Anda.
+- Sabar dan konsisten. Butuh waktu untuk membangun blog yang sukses. Jangan menyerah jika Anda tidak melihat hasil yang instan.
+
+Saya harap tips ini bermanfaat untuk Anda. Selamat mencoba!
+
+###### Ini 6
+
+Jika Anda tertarik untuk membuat blog sendiri, berikut adalah beberapa tips yang bisa Anda ikuti:
+
+- Pilih topik yang Anda sukai. Ini akan membuat Anda lebih bersemangat untuk menulis dan mengelola blog Anda.
+- Buat judul yang menarik dan deskripsi yang jelas. Ini akan membuat orang lebih tertarik untuk membaca artikel Anda.
+- Gunakan gambar dan video yang menarik. Ini akan membuat artikel Anda lebih menarik dan informatif.
+- Promosikan blog Anda di media sosial dan platform lainnya. Ini akan membantu Anda menarik lebih banyak pengunjung ke blog Anda.
+- Sabar dan konsisten. Butuh waktu untuk membangun blog yang sukses. Jangan menyerah jika Anda tidak melihat hasil yang instan.
+
+Saya harap tips ini bermanfaat untuk Anda. Selamat mencoba!
+
+#### Tips untuk Membuat Blog Sendiri
+
+Jika Anda tertarik untuk membuat blog sendiri, berikut adalah beberapa tips yang bisa Anda ikuti:
+
+- Pilih topik yang Anda sukai. Ini akan membuat Anda lebih bersemangat untuk menulis dan mengelola blog Anda.
+- Buat judul yang menarik dan deskripsi yang jelas. Ini akan membuat orang lebih tertarik untuk membaca artikel Anda.
+- Gunakan gambar dan video yang menarik. Ini akan membuat artikel Anda lebih menarik dan informatif.
+- Promosikan blog Anda di media sosial dan platform lainnya. Ini akan membantu Anda menarik lebih banyak pengunjung ke blog Anda.
+- Sabar dan konsisten. Butuh waktu untuk membangun blog yang sukses. Jangan menyerah jika Anda tidak melihat hasil yang instan.
+
+Saya harap tips ini bermanfaat untuk Anda. Selamat mencoba!
+
+### Ini 6
 
 Jika Anda tertarik untuk membuat blog sendiri, berikut adalah beberapa tips yang bisa Anda ikuti:
 
