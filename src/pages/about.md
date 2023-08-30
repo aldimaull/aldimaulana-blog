@@ -1,10 +1,10 @@
 ---
 layout: "../layouts/AboutLayout.astro"
-title: Yeay! Postingan Pertama 🚀
+title: About me.
 author: Aldi Maulana
 date: 2023-7-28
 slug: post-1
-image: { src: "/coverPost/cover-post-1.png", alt: "Contoh" }
+image: { src: "/about.jpg", alt: "Contoh" }
 ---
 
 # One morning, when Gregor Samsa woke from troubled dreams.

@@ -17,3 +17,14 @@ import ThemeMenu from "../components/ThemeMenu";
  </div>
  <Hero />
 </Layout>
+
+<script>
+ const isHeroPage = document.querySelector(".hero") !== null;
+ if (isHeroPage) {
+  const headerElement = document.querySelector("header");
+  const footerElement = document.querySelector("footer");
+
+  headerElement.remove();
+  footerElement.remove();
+ }
+</script>

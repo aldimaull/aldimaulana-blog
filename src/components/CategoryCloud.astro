@@ -22,7 +22,7 @@ const processedCats = allCategories.reduce((acc, category) => {
 const { showCount } = Astro.props;
 ---
 
-<ul class="categories flex gap-2 justify-center my-4 flex-wrap">
+<ul class="categories flex gap-2 justify-center my-4 mx-2 md:mx-0 flex-wrap">
  {
   Object.entries(processedCats).map(([key, val]) => (
    <li>

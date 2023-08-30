@@ -1,11 +1,12 @@
 ---
 import Layout from "../../layouts/MainLayout.astro";
-import Navbar from "../../components/Navbar.astro";
 import FullHeader from "../../components/FullHeader.astro";
 import Footer from "../../components/Footer.astro";
 import Card from "../../components/Card.astro";
 import Pagination from "../../components/Pagination.astro";
 import CategoryCloud from "../../components/CategoryCloud.astro";
+
+import { Fragment } from "react";
 
 import { formatBlogPosts } from "../../js/utils.js";
 
@@ -20,25 +21,24 @@ const { page } = Astro.props;
 ---
 
 <Layout title="Blog" description="Blog Page">
- <div class="h-full md:flex">
-  <div>
-   <Navbar />
-  </div>
-  <div class="w-full mx-auto">
+ <Fragment>
+  <section
+   class="w-full max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-full mx-auto"
+  >
    <FullHeader
     title="My Post"
     description="Step right into the electrifying universe, where words dance, ideas ignite, and curiosity takes the spotlight."
    />
-   <CategoryCloud showCount={true} />
-   <div
-    class="grid md:grid-cols-2 gap-2 items-center nowrap content-start md:max-w-4xl mx-auto mt-2 mb-4 p-2"
-   >
-    {page.data.map((post) => <Card posts={post.frontmatter} url={post.url} />)}
-   </div>
-   <div class="flex justify-center space-y-2 mb-4">
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-   </div>
-   <Footer />
+  </section>
+  <CategoryCloud showCount={true} />
+  <section
+   class="grid md:grid-cols-2 gap-2 items-center nowrap content-start md:max-w-4xl mx-auto mt-2 mb-4 p-2"
+  >
+   {page.data.map((post) => <Card posts={post.frontmatter} url={post.url} />)}
+  </section>
+  <div class="flex justify-center space-y-2 mb-4">
+   <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </div>
- </div>
+  <Footer />
+ </Fragment>
 </Layout>

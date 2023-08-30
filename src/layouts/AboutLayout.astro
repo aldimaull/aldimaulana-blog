@@ -4,36 +4,25 @@ import Layout from "../layouts/MainLayout.astro";
 
 // components import
 import Header from "../components/Header.astro";
-import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-
-// assets import
-import aboutImage from "/about.jpg";
 
 // styles
 import "../styles/global.css";
 
 const { frontmatter } = Astro.props;
-const { title, description, author, image } = frontmatter;
+const { title, description, image } = frontmatter;
 ---
 
 <Layout {title} {description}>
- <div class="h-full md:flex">
-  <div>
-   <Navbar />
-  </div>
-  <div class="w-full">
-   <Header title="About me" coverPhoto={aboutImage} />
-   <div class="mt-8 max-w-4xl mx-auto">
-    <div class="flex">
-     <article
-      class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-2"
-     >
-      <slot />
-     </article>
-    </div>
-   </div>
-   <Footer />
+ <Header title={title} coverPhoto={image.src} />
+ <div class="mt-8 max-w-4xl mx-auto">
+  <div class="flex">
+   <article
+    class="max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-3xl mx-auto px-2"
+   >
+    <slot />
+   </article>
   </div>
  </div>
+ <Footer />
 </Layout>

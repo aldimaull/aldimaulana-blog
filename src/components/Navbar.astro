@@ -4,10 +4,9 @@ import Menu from "./Menu";
 import ThemeMenu from "./ThemeMenu";
 ---
 
-<header
- class="md:sticky top-0 left-0 md:dark:bg-surface-highest-dark md:bg-surface-highest-light border-r border-outline-light dark:border-outline-dark"
->
- <nav class="flex w-[88px] flex-col justify-between md:h-screen">
+ <nav
+  class="md:sticky top-0 left-0 flex w-[88px] flex-col justify-between md:h-screen"
+ >
   <div
    class="hidden dark:text-on-surface-dark text-on-surface-light md:flex md:flex-col md:items-center space-y-4 py-4 items-center"
   >
@@ -28,20 +27,6 @@ import ThemeMenu from "./ThemeMenu";
    <div class="btnNav text-center">
     <button
      ><a
-      href="/contact"
-      class="normal-case flex flex-col-reverse text-xs hover:font-bold"
-     >
-      <span class="peer">Contact</span>
-      <span
-       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
-       >email</span
-      >
-     </a>
-    </button>
-   </div>
-   <div class="btnNav text-center">
-    <button
-     ><a
       href="/about"
       class="normal-case flex flex-col-reverse text-xs hover:font-bold"
      >
@@ -53,9 +38,51 @@ import ThemeMenu from "./ThemeMenu";
      </a>
     </button>
    </div>
+   <div class="btnNav text-center">
+    <button
+     ><a
+      href="/portfolio"
+      class="normal-case flex flex-col-reverse text-xs hover:font-bold"
+     >
+      <span class="peer">Portfolio</span>
+      <span
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
+       >folder</span
+      >
+     </a>
+    </button>
+   </div>
+   <div class="btnNav text-center">
+    <button
+     ><a
+      href="/project"
+      class="normal-case flex flex-col-reverse text-xs hover:font-bold"
+     >
+      <span class="peer">Project</span>
+      <span
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
+       >extension</span
+      >
+     </a>
+    </button>
+   </div>
+   <div class="btnNav text-center">
+    <button
+     ><a
+      href="/contact"
+      class="normal-case flex flex-col-reverse text-xs hover:font-bold"
+     >
+      <span class="peer">Contact</span>
+      <span
+       class="material-symbols-rounded text-2xl px-4 rounded-full peer-hover:bg-surface-light hover:bg-surface-light dark:peer-hover:bg-surface-dark dark:hover:bg-surface-dark mb-1"
+       >email</span
+      >
+     </a>
+    </button>
+   </div>
   </div>
   <div class="flex md:flex-col md:items-center py-4 items-center">
-   <span class="hidden md:inline end:0 mb-4">
+   <span class="hidden md:inline end:0 md:fixed md:z-50 md:bottom-24">
     <ThemeMenu client:load />
    </span>
    <span class="hidden md:inline end:0">
@@ -120,7 +147,6 @@ import ThemeMenu from "./ThemeMenu";
    </div>
   </div>
  </nav>
-</header>
 
 <script type="module">
  const activePage = window.location.pathname;

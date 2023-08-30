@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
+import { useDarkModeToggle } from "../js/hooks";
 
 const Toggle = () => {
- const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
- const handleDarkMode = () => {
-  setTheme(theme === "light" ? "dark" : "light");
- };
-
- useEffect(() => {
-  if (theme === "dark") {
-   document.documentElement.classList.add("dark");
-  } else {
-   document.documentElement.classList.remove("dark");
-  }
-  localStorage.setItem("theme", theme);
- }, [theme, localStorage.getItem("colorTheme")]);
+ const [theme, handleDarkMode] = useDarkModeToggle();
 
  return (
   <>

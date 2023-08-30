@@ -1,98 +1,86 @@
 ---
 import Layout from "../layouts/MainLayout.astro";
-import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-
-import pkg from "react-icons/tb/index.js";
-const { TbBrandInstagram, TbBrandFacebook, TbBrandTelegram, TbBrandLinkedin } =
- pkg;
 ---
 
 <Layout title="Contact Me" description="Contact Page">
- <div class="h-full md:flex">
-  <div>
-   <Navbar />
-  </div>
-  <div class="w-screen">
-   <div class="grid xl:grid-cols-2 gap-2 p-2">
-    <div
-     class="bg-surface-high-light dark:bg-surface-high-dark xl:h-[544px] md:p-12 break-words rounded-3xl flex flex-col justify-between p-12"
-    >
-     <h1
-      class="text-on-surface-variant-light dark:text-on-surface-variant-dark font-medium font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl my-4"
+ <div class="grid xl:grid-cols-2 gap-2 p-2">
+  <div
+   class="border border-outline-light dark:border-outline-dark bg-surface-high-light dark:bg-surface-high-dark xl:h-[544px] md:p-12 break-words rounded-3xl flex flex-col justify-between p-12"
+  >
+   <h1
+    class="text-on-surface-variant-light dark:text-on-surface-variant-dark font-medium font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl my-4"
+   >
+    Contact <span class="text-primary-light dark:text-primary-dark">Us!</span>
+   </h1>
+   <div class="flex flex-col gap-4 mt-4">
+    <div>
+     <p
+      class="font-medium text-on-surface-variant-light dark:text-on-surface-variant-dark text-sm md:text-md lg:text-lg xl:text-xl my-4"
      >
-      Contact <span class="text-primary-light dark:text-primary-dark">Us!</span>
-     </h1>
-     <div class="flex flex-col gap-4 mt-4">
-      <div>
-       <p
-        class="font-medium text-on-surface-variant-light dark:text-on-surface-variant-dark text-sm md:text-md lg:text-lg xl:text-xl my-4"
-       >
-        I love receiving messages from my loyal readers. You can also send
-        suggestions on topics you would like to read about on this blog.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div
-     class="h-full md:h-[544px] w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-high-light dark:bg-surface-high-dark flex flex-col justify-center space-y-8 p-12"
-    >
-     <h2
-      class="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-primary-light dark:text-primary-dark"
-      style="font-feature-settings: 'ss03'"
-     >
-      Feedback.
-     </h2>
-     <div class="text-secondary-light dark:text-secondary-dark">
-      <form
-       action="https://formsubmit.co/aldimaul07@gmail.com"
-       method="POST"
-       class="form-control flex flex-col font-semibold space-y-2"
-      >
-       <input type="hidden" name="_captcha" value="false" />
-       <input type="hidden" name="_template" value="table" />
-       <input
-        type="hidden"
-        name="_next"
-        value="https://aldimaulana.vercel.app/thanks/"
-       />
-       <label for="nama">Your name</label>
-       <input
-        id="nama"
-        name="Nama"
-        type="text"
-        placeholder="Your name is.."
-        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 dark:border-outline-dark focus:ring-1 focus:outline-none border focus:border-0"
-        required
-       />
-       <label for="email">Your Email</label>
-       <input
-        id="email"
-        type="email"
-        name="Email"
-        placeholder="Connect yourself.."
-        class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 focus:ring-1 focus:outline-none border focus:border-0"
-        required
-       />
-       <label for="pesan">Your Message</label>
-       <textarea
-        id="pesan"
-        placeholder="Share your thoughts.."
-        name="Pesan"
-        class="py-3 px-4 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 focus:ring-1 focus:outline-none border focus:border-0 mb-4"
-        rows="3"
-        required></textarea>
-       <button
-        class="w-full md:w-1/5 dark:bg-tertiary-container-dark bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-on-tertiary-container-dark py-2 rounded-full"
-        type="submit"
-       >
-        Send!</button
-       >
-      </form>
-     </div>
+      I love receiving messages from my readers. You can also send suggestions
+      on topics you would like to read about on this blog.
+     </p>
     </div>
    </div>
-   <Footer />
+  </div>
+  <div
+   class="border border-outline-light dark:border-outline-dark h-full md:h-[544px] w-full bg-center bg-cover bg-no-repeat rounded-3xl bg-surface-high-light dark:bg-surface-high-dark flex flex-col justify-center space-y-8 p-12"
+  >
+   <h2
+    class="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-primary-light dark:text-primary-dark"
+    style="font-feature-settings: 'ss03'"
+   >
+    Feedback.
+   </h2>
+   <div class="text-secondary-light dark:text-secondary-dark">
+    <form
+     action="https://formsubmit.co/aldimaul07@gmail.com"
+     method="POST"
+     class="form-control flex flex-col font-semibold space-y-2"
+    >
+     <input type="hidden" name="_captcha" value="false" />
+     <input type="hidden" name="_template" value="table" />
+     <input
+      type="hidden"
+      name="_next"
+      value="https://aldimaulana.vercel.app/thanks/"
+     />
+     <label for="nama">Your name</label>
+     <input
+      id="nama"
+      name="Nama"
+      type="text"
+      placeholder="Your name is.."
+      class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 dark:border-outline-dark focus:ring-1 focus:outline-none border focus:border-0"
+      required
+     />
+     <label for="email">Your Email</label>
+     <input
+      id="email"
+      type="email"
+      name="Email"
+      placeholder="Connect yourself.."
+      class="py-2 px-3 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 focus:ring-1 focus:outline-none border focus:border-0"
+      required
+     />
+     <label for="pesan">Your Message</label>
+     <textarea
+      id="pesan"
+      placeholder="Share your thoughts.."
+      name="Pesan"
+      class="py-3 px-4 block w-full border-outline-light rounded-md text-sm focus:border-primary-light focus:ring-primary-light dark:focus:border-primary-dark dark:focus:ring-primary-dark dark:bg-secondary-container-dark bg-secondary-container-light dark:border-outline-dark dark:placeholder:text-on-secondary-container-dark/60 placeholder:text-on-secondary-container-light/60 focus:ring-1 focus:outline-none border focus:border-0 mb-4"
+      rows="3"
+      required></textarea>
+     <button
+      class="w-full md:w-1/5 dark:bg-tertiary-container-dark bg-tertiary-container-dark dark:text-on-tertiary-container-dark text-on-tertiary-container-dark py-2 rounded-full"
+      type="submit"
+     >
+      Send!</button
+     >
+    </form>
+   </div>
   </div>
  </div>
+ <Footer />
 </Layout>

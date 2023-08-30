@@ -10,11 +10,14 @@ export function slugify(text) {
 }
 
 export function formatDate(date) {
- return new Date(date).toLocaleDateString("id-ID", {
+ return new Date(date).toLocaleDateString("en-US", {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  formatMatcher: "basic",
  });
 }
 

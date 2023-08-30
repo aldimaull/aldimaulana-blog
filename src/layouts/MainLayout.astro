@@ -6,53 +6,26 @@ import Head from "./MainHead.astro";
 import "../styles/global.css";
 
 import "@fontsource/plus-jakarta-sans";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 // props
 const { title, description, image, frontmatter, robots } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden md:overflow-visible theme-main">
+<html lang="en" class="overflow-x-hidden md:overflow-visible theme-default">
  <Head {title} {description} {image} {frontmatter} {robots} />
  <body
-  class="overflow-x-hidden md:overflow-visible dark:bg-surface-dark bg-surface-light duration-500"
+  class="overflow-x-hidden md:overflow-visible dark:bg-surface-dark bg-surface-light duration-500 h-full md:flex"
  >
-  <slot />
-  <script is:inline type="module">
-   const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-     return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-     return "dark";
-    }
-    return "light";
-   })();
-
-   if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-   } else {
-    document.documentElement.classList.add("dark");
-   }
-   window.localStorage.setItem("theme", theme);
-
-   const colorTheme = (() => {
-    if (
-     typeof localStorage !== "undefined" &&
-     localStorage.getItem("colorTheme")
-    ) {
-     return localStorage.getItem("colorTheme");
-    }
-    return "theme-main";
-   })();
-
-   if (colorTheme === "theme-main") {
-    document.documentElement.classList.replace("theme-ungu", "theme-main");
-   } else {
-    document.documentElement.classList.replace("theme-main", "theme-ungu");
-   }
-
-   window.localStorage.setItem("colorTheme", colorTheme);
-  </script>
+  <header
+   class="md:dark:bg-surface-highest-dark md:bg-surface-highest-light border-r border-outline-light dark:border-outline-dark"
+  >
+   <Navbar />
+  </header>
+  <main class="w-full">
+   <slot />
+  </main>
  </body>
 </html>

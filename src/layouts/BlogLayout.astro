@@ -2,7 +2,6 @@
 // layout import
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import Navbar from "../components/Navbar.astro";
 import Layout from "./MainLayout.astro";
 import Badge from "../components/Badge.astro";
 import TOC from "../components/TOC.astro";
@@ -16,7 +15,7 @@ import "../styles/global.css";
 import { formatDate, formatBlogPosts } from "../js/utils.js";
 
 // props
-const { frontmatter, headings } = Astro.props;
+const { frontmatter } = Astro.props;
 const date = formatDate(frontmatter.date);
 const { title, description, author, image, category } = frontmatter;
 
@@ -38,59 +37,46 @@ const relatedPosts = formattedPosts
  {frontmatter}
  robots={frontmatter.robots}
 >
- <div class="h-full md:flex">
-  <div>
-   <Navbar />
-  </div>
-  <div class="xl:flex xl:mx-auto xl:flex-col mx-auto w-full">
-   <div
-    class="w-full max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-full mx-auto"
-   >
-    <Header
-     {title}
-     {author}
-     {date}
-     coverPhoto={image.src}
-     {slugify(category)}
+ <div
+  class="w-full max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-full mx-auto"
+ >
+  <Header {title} {author} {date} coverPhoto={image.src} {slugify(category)} />
+ </div>
+ <div class="md:flex md:flex-row-reverse md:mx-2">
+  <section
+   class="p-2 basis-2/5 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-3xl 2xl:max-w-4xl md:ps-6 mx-auto"
+  >
+   <section>
+    <Badge
+     link={`/category/${slugify(category)}`}
+     text={category}
+     className="capitalize"
+     btnClass="text-xs"
+    />
+   </section>
+   <TOC />
+  </section>
+  <article
+  id="main-article"
+   class="basis-3/5 p-2 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl mx-auto"
+  >
+   <slot />
+   <div class="md:max-w-2xl max-w-sm mx-auto py-4">
+    <hr
+     class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
     />
    </div>
-   <div class="md:flex md:flex-row-reverse md:mx-2">
-    <div
-     class="p-2 basis-2/5 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-3xl 2xl:max-w-4xl md:ps-6 mx-auto"
-    >
-     <div>
-      <Badge
-       link={`/category/${slugify(category)}`}
-       text={category}
-       className="capitalize"
-       btnClass="text-xs"
-      />
-     </div>
-     <TOC />
-    </div>
-    <article
-     class="basis-3/5 p-2 max-[280px]:max-w-[280px] max-w-[320px] sm:max-w-sm md:max-w-sm lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl mx-auto"
-    >
-     <slot />
-     <div class="md:max-w-2xl max-w-sm mx-auto py-4">
-      <hr
-       class="bg-inverse-surface-light h-[1px] border-none dark:bg-inverse-surface-dark"
-      />
-     </div>
-     <div class="giscus p-2 rounded-xl bg-surface-variant-dark"></div>
-     {
-      relatedPosts.length > 0 && (
-       <aside class="mb-4">
-        <p>Related Posts</p>
-        <RelatedPosts {relatedPosts} />
-       </aside>
-      )
-     }
-    </article>
-   </div>
-   <Footer />
-  </div>
+   <section class="giscus p-2 rounded-xl bg-surface-variant-dark"></section>
+   {
+    relatedPosts.length > 0 && (
+     <aside class="mb-4">
+      <RelatedPosts {relatedPosts} />
+     </aside>
+    )
+   }
+  </article>
  </div>
+ <Footer />
 </Layout>
 
 <script type="module">
