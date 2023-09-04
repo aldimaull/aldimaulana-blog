@@ -59,11 +59,17 @@ const Menu = () => {
      <a href="/blog" className=" p-4 pt-4">
       <span>Blog</span>
      </a>
-     <a href="/contact" className=" p-4 ">
-      <span>Contact</span>
-     </a>
      <a href="/about" className=" p-4">
       <span>About</span>
+     </a>
+     <a href="/portfolio" className=" p-4">
+      <span>Portfolio</span>
+     </a>
+     <a href="/project" className=" p-4">
+      <span>Project</span>
+     </a>
+     <a href="/contact" className=" p-4 ">
+      <span>Contact</span>
      </a>
      <span className="end:0 dark:inline m-4">
       <Toggle />
