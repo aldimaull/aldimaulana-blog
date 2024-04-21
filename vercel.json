@@ -1,12 +1,4 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "src/pages/**/*.astro",
-      "use": "@vercel/astro",
-      "config": {
-        "output": "static"
-      }
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
