@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "target": "ESNext",
+    "types": ["vite/client"]
   },
   "extends": "astro/tsconfigs/base",
   "modules": "commonjs"
