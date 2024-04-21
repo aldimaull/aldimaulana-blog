@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/pages/**/*.astro",
+      "use": "@vercel/astro",
+      "config": {
+        "output": "static"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
